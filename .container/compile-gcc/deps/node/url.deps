@@ -1,0 +1,5 @@
+# SPDX-FileCopyrightText: 2026 Damián Búho <damian.buho@proton.me>
+#
+# SPDX-License-Identifier: MIT
+
+https://nodejs.org/dist/v${M6E_UPSTREAM_VERSION}/node-v${M6E_UPSTREAM_VERSION}.tar.xz

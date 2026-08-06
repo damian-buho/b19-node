@@ -1,0 +1,131 @@
+# SPDX-FileCopyrightText: 2026 Damián Búho <damian.buho@proton.me>
+# Copyright (C) 2026 b19
+#
+# SPDX-License-Identifier: MIT
+msgid ""
+msgstr ""
+"Project-Id-Version: b19-node\n"
+"Report-Msgid-Bugs-To: i18n@b19.dev\n"
+"POT-Creation-Date: 2026-05-02 16:15-0300\n"
+"PO-Revision-Date: 2026-02-18 00:00+0000\n"
+"Last-Translator: b19 team\n"
+"Language-Team: Ukrainian\n"
+"Language: uk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
+
+#: .container/user/build.d/user/post/700-npm-build.i.sh:10
+msgid "Build NPM project"
+msgstr "Зібрати NPM проект"
+
+#: .container/user/build.d/user/post/700-npm-build.i.sh:13
+#, fuzzy
+msgid "B19_NPM_BUILD_ENABLED is not Y, skipping build"
+msgstr "B19_NODE_BUILD_ENABLED не є Y, збірку пропущено"
+
+#: .container/user/build.d/user/post/200-npm-set-token.i.sh:19
+msgid "Authenticated on %s with %s"
+msgstr "Аутентифіковано на %s як %s"
+
+#: .container/user/build.d/user/post/200-npm-set-token.i.sh:20
+msgid "Set registry as %s"
+msgstr "Встановити реєстр як %s"
+
+#: .container/user/build.d/user/post/200-npm-set-token.i.sh:23
+msgid "Can't authenticate on %s with %s"
+msgstr "Неможливо аутентифікуватись на %s як %s"
+
+#: .container/user/build.d/user/post/200-npm-set-token.i.sh:26
+msgid "NPM registry credentials not provided"
+msgstr "Облікові дані реєстру NPM не надано"
+
+#: .container/user/build.d/user/post/500-npm-install.i.sh:11
+msgid "B19_NPM_AUTOINSTALL=N, skipping npm install"
+msgstr "B19_NPM_AUTOINSTALL=N, npm install пропущено"
+
+#: .container/user/build.d/user/post/500-npm-install.i.sh:29
+msgid "Development dependencies enabled"
+msgstr "Залежності розробки увімкнено"
+
+#: .container/user/build.d/user/post/500-npm-install.i.sh:35
+msgid "Force mode enabled"
+msgstr "Режим примусового виконання увімкнено"
+
+#: .container/user/build.d/user/post/500-npm-install.i.sh:41
+msgid "Legacy peer deps enabled"
+msgstr "Застарілі peer-залежності увімкнено"
+
+#: .container/user/build.d/user/post/500-npm-install.i.sh:44
+msgid "NPM options: %s"
+msgstr "Параметри NPM: %s"
+
+#: .container/user/build.d/user/post/500-npm-install.i.sh:48
+msgid "Install dependencies from %s"
+msgstr "Встановити залежності з %s"
+
+#: .container/user/build.d/user/post/500-npm-install.i.sh:51
+msgid "Install dependencies from global repositories"
+msgstr "Встановити залежності з глобальних репозиторіїв"
+
+#: .container/user/build.d/user/post/500-npm-install.i.sh:55
+msgid "package.json not found in %s, skipping install"
+msgstr "package.json не знайдено в %s, встановлення пропущено"
+
+#: .container/compile-gcc/build.d/compile-gcc/post/500-build-node.sh:6
+msgid "Configure"
+msgstr "Налаштувати"
+
+#: .container/compile-gcc/build.d/compile-gcc/post/500-build-node.sh:7
+msgid "Build"
+msgstr "Зібрати"
+
+#: .container/compile-gcc/build.d/compile-gcc/post/500-build-node.sh:8
+msgid "Install"
+msgstr "Встановити"
+
+#: .container/compile-gcc/build.d/compile-gcc/post/500-build-node.sh:10
+msgid "Remove %s"
+msgstr "Видалити %s"
+
+#: .container/compile-gcc/build.d/compile-gcc/post/100-download-source.sh:12
+msgid "Extract %s"
+msgstr "Розпакувати %s"
+
+#: .container/compile-gcc/build.d/compile-gcc/pre/050-setup-python.sh:4
+msgid "Using Python from %s"
+msgstr "Використання Python з %s"
+
+#: .container/base/tools.d/install-npm-from-deps:23
+msgid "Install dependencies"
+msgstr "Встановити залежності"
+
+#: .container/base/tools.d/install-npm-from-deps:23
+msgid "from"
+msgstr "з"
+
+#: .container/base/tools.d/install-npm-from-deps:23
+msgid "to"
+msgstr "до"
+
+#: .container/base/tools.d/install-npm-from-deps:26
+msgid "Remove"
+msgstr "Видалити"
+
+#: .container/base/build.d/base/post/250-make-log-directory.sh:4
+msgid "Make %s directory"
+msgstr "Створити директорію %s"
+
+#: .container/base/build.d/base/post/250-make-log-directory.sh:7
+msgid "Chown %s directory"
+msgstr "Змінити власника директорії %s"
+
+#: .container/base/build.d/base/post/850-fix-node-permissions.i.sh:6
+msgid "Set owner %s:%s %s"
+msgstr "Встановити власника %s:%s %s"
+
+#: .container/base/build.d/base/post/350-enable-corepack.sh:3
+msgid "Enable corepack for yarn and pnpm"
+msgstr "Увімкнути corepack для yarn та pnpm"

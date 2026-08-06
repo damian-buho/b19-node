@@ -1,0 +1,37 @@
+#!/usr/bin/env bash
+
+# SPDX-FileCopyrightText: 2026 Damián Búho <damian.buho@proton.me>
+#
+# SPDX-License-Identifier: MIT
+
+  set -e
+  # shellcheck source=/dev/null
+  . b19-i18n
+  # Install NPM Dependencies (we can't use package.json for global)
+  LOCATION=$1
+
+  DEPSLIST="/deps/${LOCATION}.npm.deps"
+  # Install NPM dependencies from s{STAGE}/npm.deps
+  if [[ -f "${DEPSLIST}" ]]; then
+
+    b19-log good "NPM" "NPM Dependencies list ${DEPSLIST} is detected"
+
+    # Skip if file is empty or contains only blank lines
+    if [[ $(grep -cE '\S' "${DEPSLIST}") -eq 0 ]]; then
+      b19-log warn "NPM" "NPM Dependencies list ${DEPSLIST} is empty, skipping"
+    else
+
+      # Ensure newline in the end
+      [[ $(tail -n 1 "${DEPSLIST}") != "" ]] && echo "" >> "${DEPSLIST}"
+
+      b19-run "NPM" "$(_ "Install dependencies") $(_ "from") ${DEPSLIST} $(_ "to") ${LOCATION}" --   \
+        xargs npm install --verbose --location="${LOCATION}" < <(decomment < "${DEPSLIST}")
+
+      b19-run "NPM" "$(_ "Remove") ${DEPSLIST}" --  \
+        rm "${DEPSLIST}" # We don't need inheritance here
+
+    fi
+  else
+    b19-log warn "NPM" "NPM Dependencies list ${DEPSLIST} is not detected"
+  fi
+  # We WON'T clean cache to save BuildKit optimizations

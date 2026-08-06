@@ -1,0 +1,130 @@
+# SPDX-FileCopyrightText: 2026 Damián Búho <damian.buho@proton.me>
+# Copyright (C) 2026 b19
+#
+# SPDX-License-Identifier: MIT
+msgid ""
+msgstr ""
+"Project-Id-Version: b19-node\n"
+"Report-Msgid-Bugs-To: i18n@b19.dev\n"
+"POT-Creation-Date: 2026-05-02 16:15-0300\n"
+"PO-Revision-Date: 2026-02-18 00:00+0000\n"
+"Last-Translator: b19 team\n"
+"Language-Team: Spanish\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: .container/user/build.d/user/post/700-npm-build.i.sh:10
+msgid "Build NPM project"
+msgstr "Compilar proyecto NPM"
+
+#: .container/user/build.d/user/post/700-npm-build.i.sh:13
+#, fuzzy
+msgid "B19_NPM_BUILD_ENABLED is not Y, skipping build"
+msgstr "B19_NODE_BUILD_ENABLED no es Y, se omite la compilación"
+
+#: .container/user/build.d/user/post/200-npm-set-token.i.sh:19
+msgid "Authenticated on %s with %s"
+msgstr "Autenticado en %s con %s"
+
+#: .container/user/build.d/user/post/200-npm-set-token.i.sh:20
+msgid "Set registry as %s"
+msgstr "Establecer registro como %s"
+
+#: .container/user/build.d/user/post/200-npm-set-token.i.sh:23
+msgid "Can't authenticate on %s with %s"
+msgstr "No se puede autenticar en %s con %s"
+
+#: .container/user/build.d/user/post/200-npm-set-token.i.sh:26
+msgid "NPM registry credentials not provided"
+msgstr "Credenciales del registro NPM no proporcionadas"
+
+#: .container/user/build.d/user/post/500-npm-install.i.sh:11
+msgid "B19_NPM_AUTOINSTALL=N, skipping npm install"
+msgstr "B19_NPM_AUTOINSTALL=N, se omite npm install"
+
+#: .container/user/build.d/user/post/500-npm-install.i.sh:29
+msgid "Development dependencies enabled"
+msgstr "Dependencias de desarrollo habilitadas"
+
+#: .container/user/build.d/user/post/500-npm-install.i.sh:35
+msgid "Force mode enabled"
+msgstr "Modo forzado habilitado"
+
+#: .container/user/build.d/user/post/500-npm-install.i.sh:41
+msgid "Legacy peer deps enabled"
+msgstr "Dependencias de pares heredadas habilitadas"
+
+#: .container/user/build.d/user/post/500-npm-install.i.sh:44
+msgid "NPM options: %s"
+msgstr "Opciones NPM: %s"
+
+#: .container/user/build.d/user/post/500-npm-install.i.sh:48
+msgid "Install dependencies from %s"
+msgstr "Instalar dependencias desde %s"
+
+#: .container/user/build.d/user/post/500-npm-install.i.sh:51
+msgid "Install dependencies from global repositories"
+msgstr "Instalar dependencias de repositorios globales"
+
+#: .container/user/build.d/user/post/500-npm-install.i.sh:55
+msgid "package.json not found in %s, skipping install"
+msgstr "package.json no encontrado en %s, se omite la instalación"
+
+#: .container/compile-gcc/build.d/compile-gcc/post/500-build-node.sh:6
+msgid "Configure"
+msgstr "Configurar"
+
+#: .container/compile-gcc/build.d/compile-gcc/post/500-build-node.sh:7
+msgid "Build"
+msgstr "Compilar"
+
+#: .container/compile-gcc/build.d/compile-gcc/post/500-build-node.sh:8
+msgid "Install"
+msgstr "Instalar"
+
+#: .container/compile-gcc/build.d/compile-gcc/post/500-build-node.sh:10
+msgid "Remove %s"
+msgstr "Eliminar %s"
+
+#: .container/compile-gcc/build.d/compile-gcc/post/100-download-source.sh:12
+msgid "Extract %s"
+msgstr "Extraer %s"
+
+#: .container/compile-gcc/build.d/compile-gcc/pre/050-setup-python.sh:4
+msgid "Using Python from %s"
+msgstr "Usando Python desde %s"
+
+#: .container/base/tools.d/install-npm-from-deps:23
+msgid "Install dependencies"
+msgstr "Instalar dependencias"
+
+#: .container/base/tools.d/install-npm-from-deps:23
+msgid "from"
+msgstr "desde"
+
+#: .container/base/tools.d/install-npm-from-deps:23
+msgid "to"
+msgstr "a"
+
+#: .container/base/tools.d/install-npm-from-deps:26
+msgid "Remove"
+msgstr "Eliminar"
+
+#: .container/base/build.d/base/post/250-make-log-directory.sh:4
+msgid "Make %s directory"
+msgstr "Crear directorio %s"
+
+#: .container/base/build.d/base/post/250-make-log-directory.sh:7
+msgid "Chown %s directory"
+msgstr "Cambiar propietario del directorio %s"
+
+#: .container/base/build.d/base/post/850-fix-node-permissions.i.sh:6
+msgid "Set owner %s:%s %s"
+msgstr "Establecer propietario %s:%s %s"
+
+#: .container/base/build.d/base/post/350-enable-corepack.sh:3
+msgid "Enable corepack for yarn and pnpm"
+msgstr "Habilitar corepack para yarn y pnpm"
