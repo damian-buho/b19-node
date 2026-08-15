@@ -10,7 +10,7 @@ cff-version: 1.2.0
 message: Please cite this software using the metadata from this file.
 type: software
 title: B19/Node
-abstract: Node.js runtime compiled from source
+abstract: Community-maintained distribution of Node.js based on B19/Ubuntu
 authors:
   - family-names: Búho
     given-names: Damián
@@ -25,3 +25,9 @@ contact:
     website: https://dbuho.me
 license: MIT
 repository-code: https://kiota.ch/b19/node
+keywords:
+  - node
+  - nodejs
+  - javascript
+  - runtime
+  - docker
