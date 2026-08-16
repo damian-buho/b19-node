@@ -4,13 +4,13 @@ SPDX-License-Identifier: MIT
 pf-cli-managed: yes
 -->
 
-<!-- textlint-disable terminology -->
+<!-- textlint-disable terminology,common-misspellings -->
 
 [English](../../README.md) · [Українська](../uk/README.md)
 
 # B19/Node
 
-Node.js runtime compiled from source
+Distribución de Node.js mantenida por la comunidad, basada en B19/Ubuntu
 
 [![Stand with Ukraine](https://raw.githubusercontent.com/vshymanskyy/StandWithUkraine/main/badges/StandWithUkraine.svg)](https://damian-buho.github.io/support-ukraine/) [![License](https://img.shields.io/static/v1?label=license&message=MIT&color=4c1&style=flat-square)](LICENSE) ![Commit style](https://img.shields.io/static/v1?label=commits&message=conventional&color=blue&style=flat-square) ![Workflow](https://img.shields.io/static/v1?label=workflow&message=git-flow&color=blue&style=flat-square) ![Versioning](https://img.shields.io/static/v1?label=versioning&message=semantic&color=blue&style=flat-square) [![PRs welcome](https://img.shields.io/static/v1?label=PRs&message=welcome&color=4c1&style=flat-square)](CONTRIBUTING.md) [![Citation](https://img.shields.io/static/v1?label=citation&message=cff&color=blue&style=flat-square)](CITATION.cff) [![REUSE compliance](https://api.reuse.software/badge/codeberg.org/b19/node)](https://api.reuse.software/info/codeberg.org/b19/node)
 
@@ -20,10 +20,10 @@ Node.js runtime compiled from source
 
 ## Características
 
-- Automatic npm install and build
-- Pinned package managers (npm, pnpm, corepack)
+- npm install y build automáticos
+- Gestores de paquetes fijados (npm, pnpm, corepack)
 
-Consulta [FEATURES.md](../../FEATURES.md) para ver la lista completa.
+Consulta [FEATURES.md](FEATURES.md) para ver la lista completa.
 
 ## Qué entrega este proyecto
 
@@ -106,13 +106,19 @@ Para el bucle de desarrollo local, `make dev-container` levanta el dev-container
 
 ## Enlaces
 
+### Proyecto
+
 - [Especificación de Projectfile](https://projectfile.org)
-- [B19/Node on Codeberg](https://codeberg.org/b19/node)
-- [B19/Node on GitHub](https://github.com/damian-buho/b19-node)
-- [B19/Node on kiota.ch](https://kiota.ch/b19/node)
-- [Issues on Codeberg](https://codeberg.org/b19/node/issues)
-- [Issues on GitHub](https://github.com/damian-buho/b19-node/issues)
+- [B19/Node en Codeberg](https://codeberg.org/b19/node)
+- [B19/Node en GitHub](https://github.com/damian-buho/b19-node)
+- [B19/Node en kiota.ch](https://kiota.ch/b19/node)
+- [Incidencias en Codeberg](https://codeberg.org/b19/node/issues)
+- [Incidencias en GitHub](https://github.com/damian-buho/b19-node/issues)
 - [Packages on npm](https://www.npmjs.com/package/node)
+
+### Otros
+
+- [Del autor](https://dbuho.me)
 
 ## Licencia
 
