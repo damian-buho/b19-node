@@ -4,6 +4,8 @@ SPDX-FileCopyrightText: 2026 Damián Búho <damian.buho@proton.me>
 SPDX-License-Identifier: MIT
 -->
 
+<!-- textlint-disable terminology,common-misspellings -->
+
 # Автоматичні npm install і build
 
 - Якщо під час збирання присутній `package.json`, залежності встановлюються автоматично — `npm clean-install` за наявності lockfile, інакше `npm install`.
@@ -12,3 +14,5 @@ SPDX-License-Identifier: MIT
 - Режим розробки (`APP_ENV=development`) включає dev-залежності; робочий режим їх виключає.
 - Локальний `node_modules/.bin` додається до PATH, тож встановлені проєктом інструменти командного рядка одразу доступні.
 - Поведінку встановлення можна налаштувати: режим force (`B19_NPM_INSTALL_FORCE`), legacy peer deps (`B19_NPM_INSTALL_LEGACY_PEER_DEPS`) і перемикач автовстановлення (`B19_NPM_AUTOINSTALL`).
+
+<!-- textlint-enable -->
