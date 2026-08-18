@@ -80,5 +80,4 @@ aplica a este proyecto):
 | CVE-2026-14257 | bundled inside npm (latest dist-tag); no npm release ships the fix |
 | CVE-2026-12151 | undici locked to pnpm |
 
-*Generado desde projectfile ([saber cómo](https://projectfile.org/how-to/security))*
 <!-- textlint-enable -->
