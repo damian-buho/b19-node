@@ -92,6 +92,11 @@ org:
           B19_NODE_SERIES:
             - 24
             - 26
+      nodes:
+        image-is-built:
+          # node compilation is memory-hungry enough that two series at once OOMs
+          # the pipeline runner; narrow the fleet default (2) to fully serialise.
+          max-parallel: 1
     conventions:
       fragments:
         parents:
