@@ -36,27 +36,28 @@ pf-cli-managed: yes
 
 Завантажте опублікований образ контейнера:
 
+### Завантажити з GHCR
+
 ```sh
 docker pull ghcr.io/damian-buho/b19/node-24:latest
+docker pull ghcr.io/damian-buho/b19/node-26:latest
 ```
 
-Доступні варіанти: B19_NODE_SERIES: 24, 26
+### Завантажити з DockerHub
 
 ```sh
-docker pull ghcr.io/damian-buho/b19/node-26:latest
 docker pull docker.io/damianbuho/b19-node-24:latest
 docker pull docker.io/damianbuho/b19-node-26:latest
 ```
 
+Стабільні випуски також публікують теґи `X.Y.Z`, `X.Y` і `X` — завантажте той рівень точності, який хочете зафіксувати.
+
 Якщо наведені вище реєстри недоступні, завантажте з джерела:
+
+### Завантажити з Kiota
 
 ```sh
 docker pull kiota.ch/b19/node-24:latest
-```
-
-Доступні варіанти: B19_NODE_SERIES: 24, 26
-
-```sh
 docker pull kiota.ch/b19/node-26:latest
 ```
 
@@ -64,14 +65,16 @@ docker pull kiota.ch/b19/node-26:latest
 
 Побудуйте на основі цього образу:
 
+### З GHCR
+
 ```dockerfile
 FROM ghcr.io/damian-buho/b19/node-24:latest
+FROM ghcr.io/damian-buho/b19/node-26:latest
 ```
 
-Доступні варіанти: B19_NODE_SERIES: 24, 26
+### З DockerHub
 
 ```dockerfile
-FROM ghcr.io/damian-buho/b19/node-26:latest
 FROM docker.io/damianbuho/b19-node-24:latest
 FROM docker.io/damianbuho/b19-node-26:latest
 ```
@@ -80,7 +83,9 @@ FROM docker.io/damianbuho/b19-node-26:latest
 
 ## Збирання
 
-- [Довідник із Makefile](../MAKEFILE.md)
+Виконайте `make` без аргументів для типової цілі; виконайте `make help`, щоб переглянути всі цілі.
+
+Для локального циклу розробки `make dev-container` піднімає dev-container.
 
 Точки входу конвеєра:
 
@@ -89,40 +94,20 @@ FROM docker.io/damianbuho/b19-node-26:latest
 - `make check-outdated` — Report every pinned dependency that lags upstream
 - `make ready-to-publish` — Run the pseudo-CI pipeline locally — build, test and scan, without publishing
 
-Виконайте `make` без аргументів для типової цілі; виконайте `make help`, щоб переглянути всі цілі.
-
-Для локального циклу розробки `make dev-container` піднімає dev-container.
-
-## Документація
-
-- [Known caveats](../caveats.md)
-
 ## Політики
 
 - [Як зробити внесок](CONTRIBUTING.md)
 - [Політика безпеки](SECURITY.md)
 - [Як отримати підтримку](SUPPORT.md)
 - [Кодекс поведінки](CODE_OF_CONDUCT.md)
+- [Політика щодо ШІ та LLM](AI_POLICY.md)
 
 ## Посилання
 
-### Проєкт
-
 - [Специфікація Projectfile](https://projectfile.org)
-- [B19/Node на Codeberg](https://codeberg.org/b19/node)
-- [B19/Node на GitHub](https://github.com/damian-buho/b19-node)
-- [B19/Node на kiota.ch](https://kiota.ch/b19/node)
-- [Issues на Codeberg](https://codeberg.org/b19/node/issues)
-- [Issues на GitHub](https://github.com/damian-buho/b19-node/issues)
-- [Packages on npm](https://www.npmjs.com/package/node)
-
-### Інше
-
-- [Від автора](https://dbuho.me)
 
 ## Ліцензія
 
 Цей проєкт ліцензовано на умовах MIT — див. файл [LICENSE](LICENSE) для подробиць.
 
-*Згенеровано з projectfile ([дізнатися як](https://projectfile.org/how-to/readme))*
 <!-- textlint-enable -->

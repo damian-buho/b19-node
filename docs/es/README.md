@@ -36,27 +36,28 @@ Consulta [FEATURES.md](FEATURES.md) para ver la lista completa.
 
 Descarga la imagen de contenedor publicada:
 
+### Descargar de GHCR
+
 ```sh
 docker pull ghcr.io/damian-buho/b19/node-24:latest
+docker pull ghcr.io/damian-buho/b19/node-26:latest
 ```
 
-Variantes disponibles: B19_NODE_SERIES: 24, 26
+### Descargar de DockerHub
 
 ```sh
-docker pull ghcr.io/damian-buho/b19/node-26:latest
 docker pull docker.io/damianbuho/b19-node-24:latest
 docker pull docker.io/damianbuho/b19-node-26:latest
 ```
 
+Las versiones estables también publican las etiquetas `X.Y.Z`, `X.Y` y `X`: descarga el nivel de precisión que quieras fijar.
+
 Si los registros anteriores no están disponibles, descarga desde el origen:
+
+### Descargar de Kiota
 
 ```sh
 docker pull kiota.ch/b19/node-24:latest
-```
-
-Variantes disponibles: B19_NODE_SERIES: 24, 26
-
-```sh
 docker pull kiota.ch/b19/node-26:latest
 ```
 
@@ -64,14 +65,16 @@ docker pull kiota.ch/b19/node-26:latest
 
 Construye sobre esta imagen:
 
+### Desde GHCR
+
 ```dockerfile
 FROM ghcr.io/damian-buho/b19/node-24:latest
+FROM ghcr.io/damian-buho/b19/node-26:latest
 ```
 
-Variantes disponibles: B19_NODE_SERIES: 24, 26
+### Desde DockerHub
 
 ```dockerfile
-FROM ghcr.io/damian-buho/b19/node-26:latest
 FROM docker.io/damianbuho/b19-node-24:latest
 FROM docker.io/damianbuho/b19-node-26:latest
 ```
@@ -80,7 +83,9 @@ Para el patrón multietapa recomendado y el sistema de hooks de compilación (bu
 
 ## Compilación
 
-- [Referencia del Makefile](../MAKEFILE.md)
+Ejecuta `make` sin argumentos para el destino predeterminado; ejecuta `make help` para listar todos los destinos.
+
+Para el bucle de desarrollo local, `make dev-container` levanta el dev-container.
 
 Puntos de entrada de la canalización:
 
@@ -89,40 +94,20 @@ Puntos de entrada de la canalización:
 - `make check-outdated` — Report every pinned dependency that lags upstream
 - `make ready-to-publish` — Run the pseudo-CI pipeline locally — build, test and scan, without publishing
 
-Ejecuta `make` sin argumentos para el destino predeterminado; ejecuta `make help` para listar todos los destinos.
-
-Para el bucle de desarrollo local, `make dev-container` levanta el dev-container.
-
-## Documentación
-
-- [Known caveats](../caveats.md)
-
 ## Políticas
 
 - [Cómo contribuir](CONTRIBUTING.md)
 - [Política de seguridad](SECURITY.md)
 - [Cómo obtener ayuda](SUPPORT.md)
 - [Código de conducta](CODE_OF_CONDUCT.md)
+- [Política sobre IA y LLM](AI_POLICY.md)
 
 ## Enlaces
 
-### Proyecto
-
 - [Especificación de Projectfile](https://projectfile.org)
-- [B19/Node en Codeberg](https://codeberg.org/b19/node)
-- [B19/Node en GitHub](https://github.com/damian-buho/b19-node)
-- [B19/Node en kiota.ch](https://kiota.ch/b19/node)
-- [Incidencias en Codeberg](https://codeberg.org/b19/node/issues)
-- [Incidencias en GitHub](https://github.com/damian-buho/b19-node/issues)
-- [Packages on npm](https://www.npmjs.com/package/node)
-
-### Otros
-
-- [Del autor](https://dbuho.me)
 
 ## Licencia
 
 Este proyecto se publica bajo la licencia MIT — consulta el archivo [LICENSE](LICENSE) para más detalles.
 
-*Generado desde projectfile ([saber cómo](https://projectfile.org/how-to/readme))*
 <!-- textlint-enable -->
