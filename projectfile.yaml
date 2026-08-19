@@ -104,10 +104,6 @@ org:
         parents:
           - ../ubuntu
     status: maintained
-    vulnerabilities:
-      suppress:
-        - id: CVE-2026-12151
-          reason: undici locked to pnpm
 repositories:
   - issues: true
     role: mirror
