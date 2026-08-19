@@ -12,9 +12,7 @@ Community-maintained distribution of Node.js based on B19/Ubuntu
 
 [![Stand with Ukraine](https://raw.githubusercontent.com/vshymanskyy/StandWithUkraine/main/badges/StandWithUkraine.svg)](https://damian-buho.github.io/support-ukraine/) [![License](https://badges.kiota.ch/static/v1?label=license&message=MIT&color=4c1&style=flat-square)](LICENSE) ![Commit style](https://badges.kiota.ch/static/v1?label=commits&message=conventional&color=blue&style=flat-square) ![Workflow](https://badges.kiota.ch/static/v1?label=workflow&message=git-flow&color=blue&style=flat-square) ![Versioning](https://badges.kiota.ch/static/v1?label=versioning&message=semantic&color=blue&style=flat-square) [![PRs welcome](https://badges.kiota.ch/static/v1?label=PRs&message=welcome&color=4c1&style=flat-square)](CONTRIBUTING.md) [![Citation](https://badges.kiota.ch/static/v1?label=citation&message=cff&color=blue&style=flat-square)](CITATION.cff) [![REUSE compliance](https://api.reuse.software/badge/codeberg.org/b19/node)](https://api.reuse.software/info/codeberg.org/b19/node)
 
-![Project status](https://badges.kiota.ch/static/v1?label=status&message=maintained&color=1d63ed&style=flat-square) [![Last commit](https://badges.kiota.ch/gitea/last-commit/b19/node?gitea_url=https://kiota.ch&style=flat-square)](https://kiota.ch/b19/node)
-
-[![Build status on kiota.ch](https://kiota.ch/b19/node/badges/workflows/published.yaml/badge.svg)](https://kiota.ch/b19/node/actions)
+![Project status](https://badges.kiota.ch/static/v1?label=status&message=maintained&color=1d63ed&style=flat-square) [![Last commit](https://badges.kiota.ch/gitea/last-commit/b19/node?gitea_url=https://kiota.ch&style=flat-square)](https://kiota.ch/b19/node) [![Build status on kiota.ch](https://kiota.ch/b19/node/badges/workflows/published.yaml/badge.svg)](https://kiota.ch/b19/node/actions)
 
 ## Features
 
