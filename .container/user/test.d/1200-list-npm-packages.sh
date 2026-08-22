@@ -7,5 +7,6 @@
   set -eou pipefail
 
   npm list --location=global
-  npm list --location=user
-  npm list --location=project 2>/dev/null || true
+  # A yarn/pnpm-managed or partially-installed tree is inconsistent by npm's
+  # reckoning, so this inventory reports it rather than failing on it.
+  npm list --location=project || true
