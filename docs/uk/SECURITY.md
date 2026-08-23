@@ -80,5 +80,6 @@ B19/Node наразі не має програми винагород за вр�
 | CVE-2026-33671 | bundled picomatch < 4.0.4 (npm via tinyglobby, pnpm); fixed upstream, drop after the node fleet rebuilds |
 | CVE-2026-69152 | bundled inside npm (latest dist-tag); no npm release ships the fix |
 | CVE-2026-69192 | bundled inside npm (latest dist-tag); no npm release ships the fix |
+| CVE-2026-73566 | bundled tar < 7.5.21 in npm; fixed upstream, drop after the node fleet rebuilds |
 
 <!-- textlint-enable -->
