@@ -23,6 +23,7 @@ Node.js runtime compiled from source.
 - `B19_BUILD_PROC_RATIO=0.5` (lowest ratio — V8 compile is memory-hungry)
 - `B19_NPM_AUTOINSTALL=Y` — auto-runs `npm install` if `package.json` detected
 - `B19_NPM_BUILD_ENABLED=Y` — auto-runs `npm run build` if script exists
+- `B19_NPM_INSTALL_DEVELOPMENT=Y` — include devDependencies in the install; the `APP_ENV=development` dev plane gets them regardless
 - `PATH="${PATH}:${B19_HOME}/node_modules/.bin"`
 
 ## npm 12 blocks dependency install scripts

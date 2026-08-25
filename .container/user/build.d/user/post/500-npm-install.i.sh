@@ -28,10 +28,11 @@
   then
     NPM_OPTS=(--audit=false --fund=false --no-progress --prefer-dedupe)
 
-    if [ "${APP_ENV:-}" == "development" ]
+    # APP_ENV=development (dev plane) or an explicit opt-in pulls devDependencies in
+    if [ "${APP_ENV:-}" == "development" ] || [ "${B19_NPM_INSTALL_DEVELOPMENT:-}" == "Y" ]
     then
       NPM_OPTS+=(--include=dev)
-      b19-log info "NPM" "$(_ "Development dependencies enabled")"
+      b19-log info "NPM" "$(_p "Development dependencies enabled (APP_ENV=%s, B19_NPM_INSTALL_DEVELOPMENT=%s)" "${APP_ENV:-}" "${B19_NPM_INSTALL_DEVELOPMENT:-}")"
     fi
 
     if [ "${B19_NPM_INSTALL_FORCE:-}" == "Y" ]
