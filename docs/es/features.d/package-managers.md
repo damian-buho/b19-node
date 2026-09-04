@@ -6,11 +6,10 @@ SPDX-License-Identifier: MIT
 
 <!-- textlint-disable terminology,common-misspellings -->
 
-# Gestores de paquetes fijados (npm, pnpm, corepack)
+# Gestores de paquetes fijados
 
-- npm, pnpm y corepack vienen preinstalados y con la versión fijada mediante archivos de texto declarativos (`global.npm.deps`).
-- Corepack está activado, lo que da acceso bajo demanda a Yarn y pnpm sin instalación aparte.
-- Las versiones de los gestores de paquetes son independientes del release de Node.js, lo que permite actualizarlas sin cambiar el runtime.
-- La caché de npm se persiste como montaje de caché de BuildKit para reutilizarla entre compilaciones.
+- npm, pnpm y corepack están preinstalados y con versiones fijadas, de modo que las compilaciones son reproducibles.
+- Corepack proporciona acceso bajo demanda a Yarn y pnpm sin instalación separada.
+- Las versiones de los gestores de paquetes son independientes de la versión de Node.js, lo que permite actualizaciones sin cambiar el runtime.
 
 <!-- textlint-enable -->

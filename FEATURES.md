@@ -11,16 +11,13 @@ SPDX-License-Identifier: MIT
 
 ### Automatic npm install and build
 
-- If a `package.json` is present at build time, dependencies are automatically installed -- `npm clean-install` when a lockfile exists, `npm install` otherwise.
-- Private npm registry authentication is handled via BuildKit secrets at build time, never baked into the image.
-- If a `build` script exists in `package.json`, `npm run build` runs automatically after install.
-- Development mode (`APP_ENV=development`) includes dev dependencies; production mode excludes them.
-- Local `node_modules/.bin` is added to PATH, so project-installed command-line tools are immediately available.
-- Install behavior is tunable: force mode (`B19_NPM_INSTALL_FORCE`), legacy peer deps (`B19_NPM_INSTALL_LEGACY_PEER_DEPS`), and auto-install toggle (`B19_NPM_AUTOINSTALL`).
+- Dependencies install automatically when a `package.json` is present at build time — no Dockerfile plumbing needed.
+- Private registry authentication is handled via BuildKit secrets, never baked into the image.
+- If a `build` script exists, it runs automatically after install — production images come out ready.
+- Development mode includes dev dependencies; production mode excludes them.
 
-### Pinned package managers (npm, pnpm, corepack)
+### Pinned package managers
 
-- npm, pnpm, and corepack are preinstalled and version-pinned via declarative text files (`global.npm.deps`).
-- Corepack is enabled, providing on-demand access to Yarn and pnpm without separate installation.
+- npm, pnpm, and corepack are preinstalled and version-pinned, so builds are reproducible across runs.
+- Corepack provides on-demand access to Yarn and pnpm without separate installation.
 - Package manager versions are independent of the Node.js release, allowing updates without changing the runtime.
-- npm cache is persisted as a BuildKit cache mount for reuse across builds.
