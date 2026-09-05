@@ -20,8 +20,8 @@ Distribución de Node.js mantenida por la comunidad, basada en B19/Ubuntu
 
 ## Características
 
-- npm install y build automáticos
-- Gestores de paquetes fijados (npm, pnpm, corepack)
+- Instalación automática de npm y build
+- Gestores de paquetes fijados
 
 Consulta [FEATURES.md](FEATURES.md) para ver la lista completa.
 

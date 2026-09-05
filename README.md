@@ -19,7 +19,7 @@ Community-maintained distribution of Node.js based on B19/Ubuntu
 ## Features
 
 - Automatic npm install and build
-- Pinned package managers (npm, pnpm, corepack)
+- Pinned package managers
 
 See [FEATURES.md](FEATURES.md) for the full list.
 
