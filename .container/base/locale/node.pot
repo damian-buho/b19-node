@@ -4,9 +4,9 @@
 # SPDX-License-Identifier: MIT
 msgid ""
 msgstr ""
-"Project-Id-Version: node 1.0.0-3-g9e9a605\n"
+"Project-Id-Version: node 1.1.11\n"
 "Report-Msgid-Bugs-To: https://codeberg.org/b19/node/issues\n"
-"POT-Creation-Date: 2026-08-07 22:10+0000\n"
+"POT-Creation-Date: 2026-09-07 03:45+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -95,31 +95,32 @@ msgstr ""
 msgid "B19_NPM_AUTOINSTALL=N, skipping npm install"
 msgstr ""
 
-#: .container/user/build.d/user/post/500-npm-install.i.sh:34
-msgid "Development dependencies enabled"
+#: .container/user/build.d/user/post/500-npm-install.i.sh:35
+msgid ""
+"Development dependencies enabled (APP_ENV=%s, B19_NPM_INSTALL_DEVELOPMENT=%s)"
 msgstr ""
 
-#: .container/user/build.d/user/post/500-npm-install.i.sh:40
+#: .container/user/build.d/user/post/500-npm-install.i.sh:41
 msgid "Force mode enabled"
 msgstr ""
 
-#: .container/user/build.d/user/post/500-npm-install.i.sh:46
+#: .container/user/build.d/user/post/500-npm-install.i.sh:47
 msgid "Legacy peer deps enabled"
 msgstr ""
 
-#: .container/user/build.d/user/post/500-npm-install.i.sh:49
+#: .container/user/build.d/user/post/500-npm-install.i.sh:50
 msgid "NPM options: %s"
 msgstr ""
 
-#: .container/user/build.d/user/post/500-npm-install.i.sh:53
+#: .container/user/build.d/user/post/500-npm-install.i.sh:54
 msgid "Install dependencies from %s"
 msgstr ""
 
-#: .container/user/build.d/user/post/500-npm-install.i.sh:56
+#: .container/user/build.d/user/post/500-npm-install.i.sh:57
 msgid "Install dependencies from global repositories"
 msgstr ""
 
-#: .container/user/build.d/user/post/500-npm-install.i.sh:60
+#: .container/user/build.d/user/post/500-npm-install.i.sh:61
 msgid "package.json not found in %s, skipping install"
 msgstr ""
 
