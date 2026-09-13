@@ -8,7 +8,7 @@ pf-cli-managed: yes
 
 [English](../../README.md) · [Українська](../uk/README.md)
 
-# B19/Node
+# B19 / Node
 
 Distribución de Node.js mantenida por la comunidad, basada en B19/Ubuntu
 
