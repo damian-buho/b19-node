@@ -31,6 +31,14 @@ keywords:
   - runtime
   - docker
 kind: SoftwareSourceCode
+links:
+  - label:
+      en: B19 / Node on kiota.ch
+      es: B19 / Node en kiota.ch
+      uk: B19 / Node на kiota.ch
+    preferred: true
+    type: source-code
+    url: https://kiota.ch/b19/node
 org:
   b19:
     scaffold:
@@ -64,19 +72,11 @@ org:
         parents:
           - ../ubuntu
     status: maintained
-technologies:
-  - javascript
-  - node
-links:
-  - label:
-      en: B19 / Node on kiota.ch
-      es: B19 / Node en kiota.ch
-      uk: B19 / Node на kiota.ch
-    preferred: true
-    type: source-code
-    url: https://kiota.ch/b19/node
 repositories:
   - branch: main
     role: origin
     type: git
     url: ssh://git@kiota.ch/b19/node.git
+technologies:
+  - javascript
+  - node
