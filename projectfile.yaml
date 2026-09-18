@@ -37,6 +37,7 @@ links:
       es: B19 / Node en kiota.ch
       uk: B19 / Node на kiota.ch
     preferred: true
+    priority: 10
     type: source-code
     url: https://kiota.ch/b19/node
 org:
