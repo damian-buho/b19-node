@@ -4,9 +4,9 @@
 # SPDX-License-Identifier: MIT
 msgid ""
 msgstr ""
-"Project-Id-Version: node 1.1.15-10-gf976523\n"
+"Project-Id-Version: node 1.1.15-12-g661a080\n"
 "Report-Msgid-Bugs-To: i18n@b19.dev\n"
-"POT-Creation-Date: 2026-09-24 17:48+0000\n"
+"POT-Creation-Date: 2026-09-24 17:57+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -29,6 +29,10 @@ msgstr ""
 
 #: .container/base/tools.d/install-npm-from-deps:34
 msgid "Remove"
+msgstr ""
+
+#: .container/base/build.d/always/pre/100-npm-platform.i.sh:19
+msgid "Install platform: os=%s cpu=%s libc=%s"
 msgstr ""
 
 #: .container/base/build.d/base/post/250-make-log-directory.sh:8

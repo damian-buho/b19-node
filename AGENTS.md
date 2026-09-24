@@ -51,9 +51,12 @@ An absent file keeps every script blocked. Name packages one by one:
 
 ## npm `--os` / `--cpu` / `--libc`
 
-Not set: npm already installs only the host platform’s optional packages, and
-resolving a tree still fetches every platform’s manifest, flags or not
-(`esbuild` measured 16 foreign manifests both ways). The win32/darwin lines in
+`always/pre/100-npm-platform.i.sh` exports `npm_config_os=linux`,
+`npm_config_cpu` (from `TARGETARCH`, else `process.arch`) and
+`npm_config_libc=glibc` before every stage, so each npm call installs for the
+image platform. Environment, not `.npmrc`: no project config changes. They pin
+what is installed, not what is resolved — a tree still fetches every platform’s
+manifest (`esbuild`: 16 foreign manifests either way). The win32/darwin lines in
 build logs come from `--verbose`, which `install-npm-from-deps` passes only at
 `B19_VERBOSITY=debug`.
 

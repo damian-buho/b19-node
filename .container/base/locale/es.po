@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: b19-node\n"
 "Report-Msgid-Bugs-To: i18n@b19.dev\n"
-"POT-Creation-Date: 2026-09-24 17:48+0000\n"
+"POT-Creation-Date: 2026-09-24 17:57+0000\n"
 "PO-Revision-Date: 2026-02-18 00:00+0000\n"
 "Last-Translator: b19 team\n"
 "Language-Team: Spanish\n"
@@ -31,6 +31,10 @@ msgstr "a"
 #: .container/base/tools.d/install-npm-from-deps:34
 msgid "Remove"
 msgstr "Eliminar"
+
+#: .container/base/build.d/always/pre/100-npm-platform.i.sh:19
+msgid "Install platform: os=%s cpu=%s libc=%s"
+msgstr "Plataforma de instalación: os=%s cpu=%s libc=%s"
 
 #: .container/base/build.d/base/post/250-make-log-directory.sh:8
 msgid "Make %s directory"
@@ -82,7 +86,8 @@ msgstr "Permitir scripts de instalación de %s"
 
 #: .container/user/build.d/user/post/150-npm-allow-scripts.i.sh:21
 msgid "%s lists no package, install scripts stay blocked"
-msgstr "%s no lista ningún paquete, los scripts de instalación siguen bloqueados"
+msgstr ""
+"%s no lista ningún paquete, los scripts de instalación siguen bloqueados"
 
 #: .container/user/build.d/user/post/150-npm-allow-scripts.i.sh:24
 msgid "%s not found, install scripts stay blocked"
