@@ -24,8 +24,12 @@
       # Ensure newline in the end
       [[ $(tail -n 1 "${DEPSLIST}") != "" ]] && echo "" >> "${DEPSLIST}"
 
+      # Per-package http and reify lines only at debug verbosity
+      NPM_VERBOSE=()
+      [ "${B19_VERBOSITY:-warn}" = "debug" ] && NPM_VERBOSE=(--verbose)
+
       b19-run "NPM" "$(_ "Install dependencies") $(_ "from") ${DEPSLIST} $(_ "to") ${LOCATION}" --   \
-        xargs npm install --verbose --location="${LOCATION}" < <(decomment < "${DEPSLIST}")
+        xargs npm install "${NPM_VERBOSE[@]}" --location="${LOCATION}" < <(decomment < "${DEPSLIST}")
 
       b19-run "NPM" "$(_ "Remove") ${DEPSLIST}" --  \
         rm "${DEPSLIST}" # We don't need inheritance here
