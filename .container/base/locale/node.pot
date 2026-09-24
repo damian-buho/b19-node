@@ -4,9 +4,9 @@
 # SPDX-License-Identifier: MIT
 msgid ""
 msgstr ""
-"Project-Id-Version: node 1.1.11\n"
-"Report-Msgid-Bugs-To: https://codeberg.org/b19/node/issues\n"
-"POT-Creation-Date: 2026-09-07 03:45+0000\n"
+"Project-Id-Version: node 1.1.15-10-gf976523\n"
+"Report-Msgid-Bugs-To: i18n@b19.dev\n"
+"POT-Creation-Date: 2026-09-24 17:48+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -15,19 +15,19 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: .container/base/tools.d/install-npm-from-deps:27
+#: .container/base/tools.d/install-npm-from-deps:31
 msgid "Install dependencies"
 msgstr ""
 
-#: .container/base/tools.d/install-npm-from-deps:27
+#: .container/base/tools.d/install-npm-from-deps:31
 msgid "from"
 msgstr ""
 
-#: .container/base/tools.d/install-npm-from-deps:27
+#: .container/base/tools.d/install-npm-from-deps:31
 msgid "to"
 msgstr ""
 
-#: .container/base/tools.d/install-npm-from-deps:30
+#: .container/base/tools.d/install-npm-from-deps:34
 msgid "Remove"
 msgstr ""
 
@@ -73,6 +73,18 @@ msgstr ""
 
 #: .container/compile-gcc/build.d/compile-gcc/pre/050-setup-python.sh:8
 msgid "Using Python from %s"
+msgstr ""
+
+#: .container/user/build.d/user/post/150-npm-allow-scripts.i.sh:18
+msgid "Allow install scripts of %s"
+msgstr ""
+
+#: .container/user/build.d/user/post/150-npm-allow-scripts.i.sh:21
+msgid "%s lists no package, install scripts stay blocked"
+msgstr ""
+
+#: .container/user/build.d/user/post/150-npm-allow-scripts.i.sh:24
+msgid "%s not found, install scripts stay blocked"
 msgstr ""
 
 #: .container/user/build.d/user/post/200-npm-set-token.i.sh:24

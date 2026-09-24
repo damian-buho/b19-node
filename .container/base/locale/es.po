@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: b19-node\n"
 "Report-Msgid-Bugs-To: i18n@b19.dev\n"
-"POT-Creation-Date: 2026-05-02 16:15-0300\n"
+"POT-Creation-Date: 2026-09-24 17:48+0000\n"
 "PO-Revision-Date: 2026-02-18 00:00+0000\n"
 "Last-Translator: b19 team\n"
 "Language-Team: Spanish\n"
@@ -16,115 +16,139 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: .container/user/build.d/user/post/700-npm-build.i.sh:10
+#: .container/base/tools.d/install-npm-from-deps:31
+msgid "Install dependencies"
+msgstr "Instalar dependencias"
+
+#: .container/base/tools.d/install-npm-from-deps:31
+msgid "from"
+msgstr "desde"
+
+#: .container/base/tools.d/install-npm-from-deps:31
+msgid "to"
+msgstr "a"
+
+#: .container/base/tools.d/install-npm-from-deps:34
+msgid "Remove"
+msgstr "Eliminar"
+
+#: .container/base/build.d/base/post/250-make-log-directory.sh:8
+msgid "Make %s directory"
+msgstr "Crear directorio %s"
+
+#: .container/base/build.d/base/post/250-make-log-directory.sh:11
+msgid "Chown %s directory"
+msgstr "Cambiar propietario del directorio %s"
+
+#: .container/base/build.d/base/post/350-enable-corepack.sh:7
+msgid "Enable corepack for yarn and pnpm"
+msgstr "Habilitar corepack para yarn y pnpm"
+
+#: .container/base/build.d/base/post/850-fix-node-permissions.i.sh:10
+msgid "Set owner %s:%s %s"
+msgstr "Establecer propietario %s:%s %s"
+
+#: .container/compile-gcc/build.d/compile-gcc/post/100-download-source.sh:16
+msgid "Extract %s"
+msgstr "Extraer %s"
+
+#: .container/compile-gcc/build.d/compile-gcc/post/500-build-node.sh:17
+msgid "configure probe with compile-cache off (was %s)"
+msgstr ""
+
+#: .container/compile-gcc/build.d/compile-gcc/post/500-build-node.sh:18
+msgid "Configure"
+msgstr "Configurar"
+
+#: .container/compile-gcc/build.d/compile-gcc/post/500-build-node.sh:20
+msgid "Build"
+msgstr "Compilar"
+
+#: .container/compile-gcc/build.d/compile-gcc/post/500-build-node.sh:21
+msgid "Install"
+msgstr "Instalar"
+
+#: .container/compile-gcc/build.d/compile-gcc/post/500-build-node.sh:23
+msgid "Remove %s"
+msgstr "Eliminar %s"
+
+#: .container/compile-gcc/build.d/compile-gcc/pre/050-setup-python.sh:8
+msgid "Using Python from %s"
+msgstr "Usando Python desde %s"
+
+#: .container/user/build.d/user/post/150-npm-allow-scripts.i.sh:18
+msgid "Allow install scripts of %s"
+msgstr "Permitir scripts de instalación de %s"
+
+#: .container/user/build.d/user/post/150-npm-allow-scripts.i.sh:21
+msgid "%s lists no package, install scripts stay blocked"
+msgstr "%s no lista ningún paquete, los scripts de instalación siguen bloqueados"
+
+#: .container/user/build.d/user/post/150-npm-allow-scripts.i.sh:24
+msgid "%s not found, install scripts stay blocked"
+msgstr "No se encontró %s, los scripts de instalación siguen bloqueados"
+
+#: .container/user/build.d/user/post/200-npm-set-token.i.sh:24
+msgid "Authenticated on %s with %s"
+msgstr "Autenticado en %s con %s"
+
+#: .container/user/build.d/user/post/200-npm-set-token.i.sh:25
+msgid "Set registry as %s"
+msgstr "Establecer registro como %s"
+
+#: .container/user/build.d/user/post/200-npm-set-token.i.sh:28
+msgid "Can't authenticate on %s with %s"
+msgstr "No se puede autenticar en %s con %s"
+
+#: .container/user/build.d/user/post/200-npm-set-token.i.sh:31
+msgid "NPM registry credentials not provided"
+msgstr "Credenciales del registro NPM no proporcionadas"
+
+#: .container/user/build.d/user/post/500-npm-install.i.sh:16
+msgid "B19_NPM_AUTOINSTALL=N, skipping npm install"
+msgstr "B19_NPM_AUTOINSTALL=N, se omite npm install"
+
+#: .container/user/build.d/user/post/500-npm-install.i.sh:35
+msgid ""
+"Development dependencies enabled (APP_ENV=%s, B19_NPM_INSTALL_DEVELOPMENT=%s)"
+msgstr ""
+
+#: .container/user/build.d/user/post/500-npm-install.i.sh:41
+msgid "Force mode enabled"
+msgstr "Modo forzado habilitado"
+
+#: .container/user/build.d/user/post/500-npm-install.i.sh:47
+msgid "Legacy peer deps enabled"
+msgstr "Dependencias de pares heredadas habilitadas"
+
+#: .container/user/build.d/user/post/500-npm-install.i.sh:50
+msgid "NPM options: %s"
+msgstr "Opciones NPM: %s"
+
+#: .container/user/build.d/user/post/500-npm-install.i.sh:54
+msgid "Install dependencies from %s"
+msgstr "Instalar dependencias desde %s"
+
+#: .container/user/build.d/user/post/500-npm-install.i.sh:57
+msgid "Install dependencies from global repositories"
+msgstr "Instalar dependencias de repositorios globales"
+
+#: .container/user/build.d/user/post/500-npm-install.i.sh:61
+msgid "package.json not found in %s, skipping install"
+msgstr "package.json no encontrado en %s, se omite la instalación"
+
+#: .container/user/build.d/user/post/700-npm-build.i.sh:16
 msgid "Build NPM project"
 msgstr "Compilar proyecto NPM"
 
-#: .container/user/build.d/user/post/700-npm-build.i.sh:13
+#: .container/user/build.d/user/post/700-npm-build.i.sh:19
 #, fuzzy
 msgid "B19_NPM_BUILD_ENABLED is not Y, skipping build"
 msgstr "B19_NODE_BUILD_ENABLED no es Y, se omite la compilación"
 
-#: .container/user/build.d/user/post/200-npm-set-token.i.sh:19
-msgid "Authenticated on %s with %s"
-msgstr "Autenticado en %s con %s"
+#: .container/user/test.d/1300-test-runtime.sh:21
+msgid "node-%s runtime test passed"
+msgstr ""
 
-#: .container/user/build.d/user/post/200-npm-set-token.i.sh:20
-msgid "Set registry as %s"
-msgstr "Establecer registro como %s"
-
-#: .container/user/build.d/user/post/200-npm-set-token.i.sh:23
-msgid "Can't authenticate on %s with %s"
-msgstr "No se puede autenticar en %s con %s"
-
-#: .container/user/build.d/user/post/200-npm-set-token.i.sh:26
-msgid "NPM registry credentials not provided"
-msgstr "Credenciales del registro NPM no proporcionadas"
-
-#: .container/user/build.d/user/post/500-npm-install.i.sh:11
-msgid "B19_NPM_AUTOINSTALL=N, skipping npm install"
-msgstr "B19_NPM_AUTOINSTALL=N, se omite npm install"
-
-#: .container/user/build.d/user/post/500-npm-install.i.sh:29
-msgid "Development dependencies enabled"
-msgstr "Dependencias de desarrollo habilitadas"
-
-#: .container/user/build.d/user/post/500-npm-install.i.sh:35
-msgid "Force mode enabled"
-msgstr "Modo forzado habilitado"
-
-#: .container/user/build.d/user/post/500-npm-install.i.sh:41
-msgid "Legacy peer deps enabled"
-msgstr "Dependencias de pares heredadas habilitadas"
-
-#: .container/user/build.d/user/post/500-npm-install.i.sh:44
-msgid "NPM options: %s"
-msgstr "Opciones NPM: %s"
-
-#: .container/user/build.d/user/post/500-npm-install.i.sh:48
-msgid "Install dependencies from %s"
-msgstr "Instalar dependencias desde %s"
-
-#: .container/user/build.d/user/post/500-npm-install.i.sh:51
-msgid "Install dependencies from global repositories"
-msgstr "Instalar dependencias de repositorios globales"
-
-#: .container/user/build.d/user/post/500-npm-install.i.sh:55
-msgid "package.json not found in %s, skipping install"
-msgstr "package.json no encontrado en %s, se omite la instalación"
-
-#: .container/compile-gcc/build.d/compile-gcc/post/500-build-node.sh:6
-msgid "Configure"
-msgstr "Configurar"
-
-#: .container/compile-gcc/build.d/compile-gcc/post/500-build-node.sh:7
-msgid "Build"
-msgstr "Compilar"
-
-#: .container/compile-gcc/build.d/compile-gcc/post/500-build-node.sh:8
-msgid "Install"
-msgstr "Instalar"
-
-#: .container/compile-gcc/build.d/compile-gcc/post/500-build-node.sh:10
-msgid "Remove %s"
-msgstr "Eliminar %s"
-
-#: .container/compile-gcc/build.d/compile-gcc/post/100-download-source.sh:12
-msgid "Extract %s"
-msgstr "Extraer %s"
-
-#: .container/compile-gcc/build.d/compile-gcc/pre/050-setup-python.sh:4
-msgid "Using Python from %s"
-msgstr "Usando Python desde %s"
-
-#: .container/base/tools.d/install-npm-from-deps:23
-msgid "Install dependencies"
-msgstr "Instalar dependencias"
-
-#: .container/base/tools.d/install-npm-from-deps:23
-msgid "from"
-msgstr "desde"
-
-#: .container/base/tools.d/install-npm-from-deps:23
-msgid "to"
-msgstr "a"
-
-#: .container/base/tools.d/install-npm-from-deps:26
-msgid "Remove"
-msgstr "Eliminar"
-
-#: .container/base/build.d/base/post/250-make-log-directory.sh:4
-msgid "Make %s directory"
-msgstr "Crear directorio %s"
-
-#: .container/base/build.d/base/post/250-make-log-directory.sh:7
-msgid "Chown %s directory"
-msgstr "Cambiar propietario del directorio %s"
-
-#: .container/base/build.d/base/post/850-fix-node-permissions.i.sh:6
-msgid "Set owner %s:%s %s"
-msgstr "Establecer propietario %s:%s %s"
-
-#: .container/base/build.d/base/post/350-enable-corepack.sh:3
-msgid "Enable corepack for yarn and pnpm"
-msgstr "Habilitar corepack para yarn y pnpm"
+#~ msgid "Development dependencies enabled"
+#~ msgstr "Dependencias de desarrollo habilitadas"

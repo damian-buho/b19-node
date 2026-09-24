@@ -39,14 +39,23 @@ A shim that re-execs its own path turns every call into an unbounded self-spawn
 (the o9s/alertmanager elm case: `pids.max` filled in ~1 minute, cgroup OOM, frozen
 host). The install reports success, so nothing points at it.
 
-Consuming projects MUST approve per package, after `npm ci` (approval needs the
-package installed), then rebuild it — and assert the result:
+Consuming projects list the packages to approve, one per line, in
+`.container/user/deps/allow-scripts.npm.deps` (copied to `/deps/allow-scripts.npm.deps`).
+`150-npm-allow-scripts.i.sh` writes them to the user `.npmrc` as `allow-scripts`
+before any install, so `npm ci` runs those scripts itself. npm refuses
+`--allow-scripts` and `npm_config_allow_scripts` in a project install
+(`EALLOWSCRIPTS`), so `.npmrc` is the only place besides `package.json` `allowScripts`.
+An absent file keeps every script blocked. Name packages one by one:
+`--dangerously-allow-all-scripts` arms the whole tree. The same file drives
+[b19/bun](../bun/AGENTS.md).
 
-```sh
-npm ci && npm install-scripts approve <pkg> && npm rebuild <pkg>
-```
+## npm `--os` / `--cpu` / `--libc`
 
-Approve one package at a time. `--dangerously-allow-all-scripts` arms the whole tree.
+Not set: npm already installs only the host platform’s optional packages, and
+resolving a tree still fetches every platform’s manifest, flags or not
+(`esbuild` measured 16 foreign manifests both ways). The win32/darwin lines in
+build logs come from `--verbose`, which `install-npm-from-deps` passes only at
+`B19_VERBOSITY=debug`.
 
 ## Private npm registry auth
 
