@@ -22,6 +22,7 @@ includes:
   - .makefile/b19/images/python.yaml
   - .makefile/b19/images/ubuntu.yaml
   - .makefile/b19/vulnerabilities/npm-bundled.yaml
+  - .makefile/container/traits/image-variant.yaml
   - https://kiota.ch/b19/metadata/raw/branch/main/include.yaml
   - https://kiota.ch/damian-buho/metadata/raw/branch/main/include.yaml
 keywords:
@@ -52,8 +53,10 @@ org:
         - npm_config_registry
     image:
       series: "{B19_NODE_SERIES}"
-      path: ${org}/${name}-${series}
-      flatpath: ${org}-${name}-${series}
+      tag: ${series}
+      variant:
+        parts:
+          - series
     ci:
       image: b19/node-{B19_NODE_SERIES}
       matrix:
