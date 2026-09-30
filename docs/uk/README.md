@@ -27,8 +27,8 @@ pf-cli-managed: yes
 
 ## Що надає цей проєкт
 
-- **Образ контейнера** `kiota.ch/b19/node-24:latest`
-- **Образ контейнера** `kiota.ch/b19/node-26:latest`
+- **Образ контейнера** `kiota.ch/b19/node:24`
+- **Образ контейнера** `kiota.ch/b19/node:26`
 
 ## Підтримувані платформи
 
@@ -39,7 +39,7 @@ pf-cli-managed: yes
 Завантажте опублікований образ контейнера:
 
 ```sh
-docker pull kiota.ch/b19/node-24:latest
+docker pull kiota.ch/b19/node:24
 ```
 
 Серія: `24` | `26`
@@ -51,7 +51,7 @@ docker pull kiota.ch/b19/node-24:latest
 Побудуйте на основі цього образу:
 
 ```dockerfile
-FROM kiota.ch/b19/node-24:latest
+FROM kiota.ch/b19/node:24
 ```
 
 Серія: `24` | `26`

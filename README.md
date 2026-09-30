@@ -25,8 +25,8 @@ See [Features](docs/FEATURES.md) for the full list.
 
 ## What this provides
 
-- **Container image** `kiota.ch/b19/node-24:latest`
-- **Container image** `kiota.ch/b19/node-26:latest`
+- **Container image** `kiota.ch/b19/node:24`
+- **Container image** `kiota.ch/b19/node:26`
 
 ## Supported platforms
 
@@ -37,7 +37,7 @@ See [Features](docs/FEATURES.md) for the full list.
 Pull the published container image:
 
 ```sh
-docker pull kiota.ch/b19/node-24:latest
+docker pull kiota.ch/b19/node:24
 ```
 
 Series: `24` | `26`
@@ -49,7 +49,7 @@ Stable releases also publish `X.Y.Z`, `X.Y` and `X` tags — pull the precision 
 Build on top of this image:
 
 ```dockerfile
-FROM kiota.ch/b19/node-24:latest
+FROM kiota.ch/b19/node:24
 ```
 
 Series: `24` | `26`

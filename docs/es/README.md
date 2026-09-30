@@ -27,8 +27,8 @@ Consulta [Características](FEATURES.md) para ver la lista completa.
 
 ## Qué entrega este proyecto
 
-- **Imagen de contenedor** `kiota.ch/b19/node-24:latest`
-- **Imagen de contenedor** `kiota.ch/b19/node-26:latest`
+- **Imagen de contenedor** `kiota.ch/b19/node:24`
+- **Imagen de contenedor** `kiota.ch/b19/node:26`
 
 ## Plataformas admitidas
 
@@ -39,7 +39,7 @@ Consulta [Características](FEATURES.md) para ver la lista completa.
 Descarga la imagen de contenedor publicada:
 
 ```sh
-docker pull kiota.ch/b19/node-24:latest
+docker pull kiota.ch/b19/node:24
 ```
 
 Serie: `24` | `26`
@@ -51,7 +51,7 @@ Las versiones estables también publican las etiquetas `X.Y.Z`, `X.Y` y `X`: des
 Construye sobre esta imagen:
 
 ```dockerfile
-FROM kiota.ch/b19/node-24:latest
+FROM kiota.ch/b19/node:24
 ```
 
 Serie: `24` | `26`
