@@ -10,9 +10,9 @@ pf-cli-managed: yes
 
 # B19 / Node
 
-Дистрибуція Node.js з підтримкою спільноти на основі B19/Ubuntu
+Дистрибуція Node.js з підтримкою спільноти, зібрана на основі B19/Ubuntu. Цей репозиторій містить лише пакування — Dockerfile, скрипти збирання та конфігурацію, усе під ліцензією MIT; вихідний код Node.js отримують під час збирання, і він зберігає власну ліцензію.
 
-[![Stand with Ukraine](https://raw.githubusercontent.com/vshymanskyy/StandWithUkraine/main/badges/StandWithUkraine.svg)](https://damian-buho.github.io/support-ukraine/) [![Projectfile inside](https://badges.kiota.ch/static/v1?label=projectfile&message=inside&labelColor=0d0d0d&color=8c6723&style=flat-square)](https://projectfile.org) [![License](https://badges.kiota.ch/static/v1?label=license&message=MIT&color=1e5913&style=flat-square)](LICENSE) [![Commit style](https://badges.kiota.ch/static/v1?label=commits&message=conventional%20v1.0.0&color=1877aa&style=flat-square)](https://www.conventionalcommits.org/uk/v1.0.0/) ![Workflow](https://badges.kiota.ch/static/v1?label=workflow&message=git-flow&color=1877aa&style=flat-square) [![Versioning](https://badges.kiota.ch/static/v1?label=versioning&message=semantic%20v2.0.0&color=1877aa&style=flat-square)](https://semver.org/lang/uk/) [![PRs welcome](https://badges.kiota.ch/static/v1?label=PRs&message=welcome&color=1e5913&style=flat-square)](CONTRIBUTING.md) [![Citation](https://badges.kiota.ch/static/v1?label=citation&message=cff&color=1877aa&style=flat-square)](CITATION.cff)
+[![Stand with Ukraine](https://raw.githubusercontent.com/vshymanskyy/StandWithUkraine/main/badges/StandWithUkraine.svg)](https://damian-buho.github.io/support-ukraine/) [![Projectfile inside](https://badges.kiota.ch/static/v1?label=projectfile&message=inside&labelColor=0d0d0d&color=8c6723&style=flat-square)](https://projectfile.org) [![License](https://badges.kiota.ch/static/v1?label=license&message=MIT&color=1e5913&style=flat-square)](LICENSE) [![Commit style](https://badges.kiota.ch/static/v1?label=commits&message=conventional%20v1.0.0&color=1877aa&style=flat-square)](https://www.conventionalcommits.org/uk/v1.0.0/) ![Workflow](https://badges.kiota.ch/static/v1?label=workflow&message=git-flow&color=1877aa&style=flat-square) [![Versioning](https://badges.kiota.ch/static/v1?label=versioning&message=semantic%20v2.0.0&color=1877aa&style=flat-square)](https://semver.org/lang/uk/) [![Citation](https://badges.kiota.ch/static/v1?label=citation&message=cff&color=1877aa&style=flat-square)](CITATION.cff)
 
 ![Project status](https://badges.kiota.ch/static/v1?label=status&message=maintained&color=1d63ed&style=flat-square) [![Last commit on kiota.ch](https://badges.kiota.ch/gitea/last-commit/b19/node?gitea_url=https://kiota.ch&label=last%20commit%20on%20kiota.ch&style=flat-square)](https://kiota.ch/b19/node)
 
@@ -25,16 +25,48 @@ pf-cli-managed: yes
 
 Див. [FEATURES.md](FEATURES.md), щоб переглянути повний перелік.
 
+## Що надає цей проєкт
+
+- **Образ контейнера** `kiota.ch/b19/node-24:latest`
+- **Образ контейнера** `kiota.ch/b19/node-26:latest`
+
+## Підтримувані платформи
+
+- `linux/amd64`
+
 ## Встановлення
 
-Якщо наведені вище реєстри недоступні, завантажте з джерела:
+Завантажте опублікований образ контейнера:
 
 ```sh
 docker pull kiota.ch/b19/node-24:latest
-docker pull kiota.ch/b19/node-26:latest
 ```
 
+Серія: `24` | `26`
+
+Стабільні випуски також публікують теґи `X.Y.Z`, `X.Y` і `X` — завантажте той рівень точності, який хочете зафіксувати.
+
+## Використання
+
+Побудуйте на основі цього образу:
+
+```dockerfile
+FROM kiota.ch/b19/node-24:latest
+```
+
+Серія: `24` | `26`
+
+Для рекомендованого багатоетапного шаблону та системи хуків збірки (build.d) створіть похідний проєкт за допомогою `b19/scripts/scaffold.sh` з [m6e/b19](https://kiota.ch/m6e/b19).
+
 ## Збирання
+
+Зберіть образ контейнера локально:
+
+```sh
+make container-build
+```
+
+- [Довідник із Makefile](../how-to/MAKEFILE.md)
 
 Виконайте `make` без аргументів для типової цілі; виконайте `make help`, щоб переглянути всі цілі.
 
@@ -42,10 +74,10 @@ docker pull kiota.ch/b19/node-26:latest
 
 Точки входу конвеєра:
 
-- `make analyze` — Run the heavy analysis sweep (mutation testing, benchmarks)
-- `make audited` — Re-scan the pinned dependencies and published artifacts for new vulnerabilities
-- `make check-outdated` — Report every pinned dependency that lags upstream
-- `make ready-to-publish` — Run the pseudo-CI pipeline locally — build, test and scan, without publishing
+- `make analyze` — Запускає важкий аналіз (мутаційне тестування, бенчмарки)
+- `make audited` — Повторно сканує закріплені залежності й опубліковані артефакти на нові вразливості
+- `make check-outdated` — Звітує про кожну закріплену залежність, що відстає від upstream
+- `make ready-to-publish` — Запускає псевдо-CI локально — збирає, тестує й сканує без публікації
 
 ## Політики
 
