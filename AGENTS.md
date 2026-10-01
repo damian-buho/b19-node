@@ -12,10 +12,10 @@ Node.js runtime compiled from source.
 
 ## Key facts
 
-- Builder stages: `b19/python-{series}` (Python for Node’s build tool) + `b19/gcc-{series}`
-- Final base: `b19/ubuntu/${B19_UBUNTU_SERIES}`
+- Builder stages: `b19/python:{series}` (Python for Node’s build tool) + `b19/gcc:{series}`
+- Final base: `b19/ubuntu:${B19_UBUNTU_SERIES}`
 - Series: 24, 26 (optional: 22)
-- Image name: `b19/node-{series}`
+- Image name: `b19/node:{series}`
 - Arch: amd64 only
 
 ## ENV
