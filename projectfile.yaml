@@ -58,7 +58,6 @@ org:
         parts:
           - series
     ci:
-      image: b19/node-{B19_NODE_SERIES}
       matrix:
         axes:
           B19_NODE_SERIES:
