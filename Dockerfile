@@ -2,11 +2,11 @@
 #
 # SPDX-License-Identifier: MIT
 
-ARG B19_GCC_BASE_IMAGE=registry.invalid/b19/gcc:${B19_GCC_SERIES}
+ARG B19_GCC_BASE_IMAGE=registry.invalid/b19/gcc:gcc${B19_GCC_SERIES}
 ARG B19_NODE_SERIES=24
 ARG B19_UBUNTU_SERIES=resolute
 ARG B19_PYTHON_SERIES=3.14
-ARG B19_PYTHON_BASE_IMAGE=registry.invalid/b19/python:${B19_PYTHON_SERIES}
+ARG B19_PYTHON_BASE_IMAGE=registry.invalid/b19/python:py${B19_PYTHON_SERIES}
 ARG B19_UBUNTU_BASE_IMAGE=registry.invalid/b19/ubuntu:${B19_UBUNTU_SERIES}
 
 FROM ${B19_PYTHON_BASE_IMAGE} AS b19-python-source

@@ -53,7 +53,7 @@ org:
       env:
         - npm_config_registry
     image:
-      series: "{B19_NODE_SERIES}"
+      series: "n{B19_NODE_SERIES}"
       tag: ${series}
       variant:
         parts:
