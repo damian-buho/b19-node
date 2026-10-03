@@ -42,7 +42,7 @@ Descarga la imagen de contenedor publicada:
 docker pull kiota.ch/b19/node:n24
 ```
 
-B19_NODE_SERIES: `24` | `26`
+Serie: `n24` | `n26`
 
 Las versiones estables también publican las etiquetas `X.Y.Z`, `X.Y` y `X`: descarga el nivel de precisión que quieras fijar.
 
@@ -54,7 +54,7 @@ Construye sobre esta imagen:
 FROM kiota.ch/b19/node:n24
 ```
 
-B19_NODE_SERIES: `24` | `26`
+Serie: `n24` | `n26`
 
 Para el patrón multietapa recomendado y el sistema de hooks de compilación (build.d), genera un derivado con `b19/scripts/scaffold.sh` de [m6e/b19](https://kiota.ch/m6e/b19).
 

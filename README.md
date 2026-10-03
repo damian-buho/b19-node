@@ -40,7 +40,7 @@ Pull the published container image:
 docker pull kiota.ch/b19/node:n24
 ```
 
-B19_NODE_SERIES: `24` | `26`
+Series: `n24` | `n26`
 
 Stable releases also publish `X.Y.Z`, `X.Y` and `X` tags — pull the precision you want to pin.
 
@@ -52,7 +52,7 @@ Build on top of this image:
 FROM kiota.ch/b19/node:n24
 ```
 
-B19_NODE_SERIES: `24` | `26`
+Series: `n24` | `n26`
 
 For the recommended multi-stage pattern and the build-hook system (build.d), scaffold a derivative with `b19/scripts/scaffold.sh` from [m6e/b19](https://kiota.ch/m6e/b19).
 
