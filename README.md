@@ -14,7 +14,7 @@ Community-maintained distribution of Node.js built on B19/Ubuntu. This repositor
 
 ![Project status](https://badges.kiota.ch/static/v1?label=status&message=maintained&color=1d63ed&style=flat-square) [![Last commit on kiota.ch](https://badges.kiota.ch/gitea/last-commit/b19/node?gitea_url=https://kiota.ch&label=last%20commit%20on%20kiota.ch&style=flat-square)](https://kiota.ch/b19/node)
 
-[![Publish pipeline on kiota.ch](https://kiota.ch/b19/node/badges/workflows/published.yaml/badge.svg?style=flat-square)](https://kiota.ch/b19/node/actions) [![Vulnerability audit on kiota.ch](https://kiota.ch/b19/node/badges/workflows/audited.yaml/badge.svg?style=flat-square)](https://kiota.ch/b19/node/actions) [![Dependency freshness on kiota.ch](https://kiota.ch/b19/node/badges/workflows/check-outdated.yaml/badge.svg?style=flat-square)](https://kiota.ch/b19/node/actions) [![Analysis sweep on kiota.ch](https://kiota.ch/b19/node/badges/workflows/analyze.yaml/badge.svg?style=flat-square)](https://kiota.ch/b19/node/actions)
+[![Publish pipeline on kiota.ch](https://kiota.ch/b19/node/badges/workflows/published.yaml/badge.svg?style=flat-square)](https://kiota.ch/b19/node/actions) [![Vulnerability audit on kiota.ch](https://kiota.ch/b19/node/badges/workflows/audited.yaml/badge.svg?style=flat-square)](https://kiota.ch/b19/node/actions) [![Dependency freshness on kiota.ch](https://kiota.ch/b19/node/badges/workflows/check-outdated.yaml/badge.svg?style=flat-square)](https://kiota.ch/b19/node/actions) [![Analysis sweep on kiota.ch](https://kiota.ch/b19/node/badges/workflows/analyzed.yaml/badge.svg?style=flat-square)](https://kiota.ch/b19/node/actions)
 
 ## Features
 
@@ -25,8 +25,8 @@ See [Features](docs/FEATURES.md) for the full list.
 
 ## What this provides
 
-- **Container image** `kiota.ch/b19/node:24`
-- **Container image** `kiota.ch/b19/node:26`
+- **Container image** `kiota.ch/b19/node:n24`
+- **Container image** `kiota.ch/b19/node:n26`
 
 ## Supported platforms
 
@@ -37,10 +37,10 @@ See [Features](docs/FEATURES.md) for the full list.
 Pull the published container image:
 
 ```sh
-docker pull kiota.ch/b19/node:24
+docker pull kiota.ch/b19/node:n24
 ```
 
-Series: `24` | `26`
+B19_NODE_SERIES: `24` | `26`
 
 Stable releases also publish `X.Y.Z`, `X.Y` and `X` tags — pull the precision you want to pin.
 
@@ -49,10 +49,10 @@ Stable releases also publish `X.Y.Z`, `X.Y` and `X` tags — pull the precision 
 Build on top of this image:
 
 ```dockerfile
-FROM kiota.ch/b19/node:24
+FROM kiota.ch/b19/node:n24
 ```
 
-Series: `24` | `26`
+B19_NODE_SERIES: `24` | `26`
 
 For the recommended multi-stage pattern and the build-hook system (build.d), scaffold a derivative with `b19/scripts/scaffold.sh` from [m6e/b19](https://kiota.ch/m6e/b19).
 

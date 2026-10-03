@@ -16,7 +16,7 @@ Distribución de Node.js mantenida por la comunidad, construida sobre B19/Ubuntu
 
 ![Project status](https://badges.kiota.ch/static/v1?label=status&message=maintained&color=1d63ed&style=flat-square) [![Last commit on kiota.ch](https://badges.kiota.ch/gitea/last-commit/b19/node?gitea_url=https://kiota.ch&label=last%20commit%20on%20kiota.ch&style=flat-square)](https://kiota.ch/b19/node)
 
-[![Publish pipeline on kiota.ch](https://kiota.ch/b19/node/badges/workflows/published.yaml/badge.svg?style=flat-square)](https://kiota.ch/b19/node/actions) [![Vulnerability audit on kiota.ch](https://kiota.ch/b19/node/badges/workflows/audited.yaml/badge.svg?style=flat-square)](https://kiota.ch/b19/node/actions) [![Dependency freshness on kiota.ch](https://kiota.ch/b19/node/badges/workflows/check-outdated.yaml/badge.svg?style=flat-square)](https://kiota.ch/b19/node/actions) [![Analysis sweep on kiota.ch](https://kiota.ch/b19/node/badges/workflows/analyze.yaml/badge.svg?style=flat-square)](https://kiota.ch/b19/node/actions)
+[![Publish pipeline on kiota.ch](https://kiota.ch/b19/node/badges/workflows/published.yaml/badge.svg?style=flat-square)](https://kiota.ch/b19/node/actions) [![Vulnerability audit on kiota.ch](https://kiota.ch/b19/node/badges/workflows/audited.yaml/badge.svg?style=flat-square)](https://kiota.ch/b19/node/actions) [![Dependency freshness on kiota.ch](https://kiota.ch/b19/node/badges/workflows/check-outdated.yaml/badge.svg?style=flat-square)](https://kiota.ch/b19/node/actions) [![Analysis sweep on kiota.ch](https://kiota.ch/b19/node/badges/workflows/analyzed.yaml/badge.svg?style=flat-square)](https://kiota.ch/b19/node/actions)
 
 ## Características
 
@@ -27,8 +27,8 @@ Consulta [Características](FEATURES.md) para ver la lista completa.
 
 ## Qué entrega este proyecto
 
-- **Imagen de contenedor** `kiota.ch/b19/node:24`
-- **Imagen de contenedor** `kiota.ch/b19/node:26`
+- **Imagen de contenedor** `kiota.ch/b19/node:n24`
+- **Imagen de contenedor** `kiota.ch/b19/node:n26`
 
 ## Plataformas admitidas
 
@@ -39,10 +39,10 @@ Consulta [Características](FEATURES.md) para ver la lista completa.
 Descarga la imagen de contenedor publicada:
 
 ```sh
-docker pull kiota.ch/b19/node:24
+docker pull kiota.ch/b19/node:n24
 ```
 
-Serie: `24` | `26`
+B19_NODE_SERIES: `24` | `26`
 
 Las versiones estables también publican las etiquetas `X.Y.Z`, `X.Y` y `X`: descarga el nivel de precisión que quieras fijar.
 
@@ -51,10 +51,10 @@ Las versiones estables también publican las etiquetas `X.Y.Z`, `X.Y` y `X`: des
 Construye sobre esta imagen:
 
 ```dockerfile
-FROM kiota.ch/b19/node:24
+FROM kiota.ch/b19/node:n24
 ```
 
-Serie: `24` | `26`
+B19_NODE_SERIES: `24` | `26`
 
 Para el patrón multietapa recomendado y el sistema de hooks de compilación (build.d), genera un derivado con `b19/scripts/scaffold.sh` de [m6e/b19](https://kiota.ch/m6e/b19).
 

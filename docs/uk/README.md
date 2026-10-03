@@ -16,7 +16,7 @@ pf-cli-managed: yes
 
 ![Project status](https://badges.kiota.ch/static/v1?label=status&message=maintained&color=1d63ed&style=flat-square) [![Last commit on kiota.ch](https://badges.kiota.ch/gitea/last-commit/b19/node?gitea_url=https://kiota.ch&label=last%20commit%20on%20kiota.ch&style=flat-square)](https://kiota.ch/b19/node)
 
-[![Publish pipeline on kiota.ch](https://kiota.ch/b19/node/badges/workflows/published.yaml/badge.svg?style=flat-square)](https://kiota.ch/b19/node/actions) [![Vulnerability audit on kiota.ch](https://kiota.ch/b19/node/badges/workflows/audited.yaml/badge.svg?style=flat-square)](https://kiota.ch/b19/node/actions) [![Dependency freshness on kiota.ch](https://kiota.ch/b19/node/badges/workflows/check-outdated.yaml/badge.svg?style=flat-square)](https://kiota.ch/b19/node/actions) [![Analysis sweep on kiota.ch](https://kiota.ch/b19/node/badges/workflows/analyze.yaml/badge.svg?style=flat-square)](https://kiota.ch/b19/node/actions)
+[![Publish pipeline on kiota.ch](https://kiota.ch/b19/node/badges/workflows/published.yaml/badge.svg?style=flat-square)](https://kiota.ch/b19/node/actions) [![Vulnerability audit on kiota.ch](https://kiota.ch/b19/node/badges/workflows/audited.yaml/badge.svg?style=flat-square)](https://kiota.ch/b19/node/actions) [![Dependency freshness on kiota.ch](https://kiota.ch/b19/node/badges/workflows/check-outdated.yaml/badge.svg?style=flat-square)](https://kiota.ch/b19/node/actions) [![Analysis sweep on kiota.ch](https://kiota.ch/b19/node/badges/workflows/analyzed.yaml/badge.svg?style=flat-square)](https://kiota.ch/b19/node/actions)
 
 ## Можливості
 
@@ -27,8 +27,8 @@ pf-cli-managed: yes
 
 ## Що надає цей проєкт
 
-- **Образ контейнера** `kiota.ch/b19/node:24`
-- **Образ контейнера** `kiota.ch/b19/node:26`
+- **Образ контейнера** `kiota.ch/b19/node:n24`
+- **Образ контейнера** `kiota.ch/b19/node:n26`
 
 ## Підтримувані платформи
 
@@ -39,10 +39,10 @@ pf-cli-managed: yes
 Завантажте опублікований образ контейнера:
 
 ```sh
-docker pull kiota.ch/b19/node:24
+docker pull kiota.ch/b19/node:n24
 ```
 
-Серія: `24` | `26`
+B19_NODE_SERIES: `24` | `26`
 
 Стабільні випуски також публікують теґи `X.Y.Z`, `X.Y` і `X` — завантажте той рівень точності, який хочете зафіксувати.
 
@@ -51,10 +51,10 @@ docker pull kiota.ch/b19/node:24
 Побудуйте на основі цього образу:
 
 ```dockerfile
-FROM kiota.ch/b19/node:24
+FROM kiota.ch/b19/node:n24
 ```
 
-Серія: `24` | `26`
+B19_NODE_SERIES: `24` | `26`
 
 Для рекомендованого багатоетапного шаблону та системи хуків збірки (build.d) створіть похідний проєкт за допомогою `b19/scripts/scaffold.sh` з [m6e/b19](https://kiota.ch/m6e/b19).
 
