@@ -22,11 +22,11 @@ $(FETCH_PATH)/.node.24.21.0.stamp: .container/compile-gcc/deps/node/url.deps .co
 
 PREREQUISITES += .container/compile-gcc/deps/node/24/hash.deps
 
-$(FETCH_PATH)/.node.26.10.0.stamp: .container/compile-gcc/deps/node/url.deps .container/compile-gcc/deps/node/26/version.deps
+$(FETCH_PATH)/.node.26.11.0.stamp: .container/compile-gcc/deps/node/url.deps .container/compile-gcc/deps/node/26/version.deps
 	M6E_DEPS_STAGE=compile-gcc M6E_SERIES=26 .makefile/container/scripts/fetch.sh node
 	touch $@
 
-.container/compile-gcc/deps/node/26/hash.deps: $(FETCH_PATH)/.node.26.10.0.stamp
+.container/compile-gcc/deps/node/26/hash.deps: $(FETCH_PATH)/.node.26.11.0.stamp
 	M6E_DEPS_STAGE=compile-gcc M6E_SERIES=26 .makefile/container/scripts/update-hash.sh node
 
 PREREQUISITES += .container/compile-gcc/deps/node/26/hash.deps
