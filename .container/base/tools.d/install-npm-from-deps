@@ -28,8 +28,12 @@
       NPM_VERBOSE=()
       [ "${B19_VERBOSITY:-warn}" = "debug" ] && NPM_VERBOSE=(--verbose)
 
+      # Cache in the BuildKit mount, never in the image layer
+      NPM_CACHE=()
+      [ -n "${B19_NODE_NPM_CACHE:-}" ] && NPM_CACHE=(--cache="${B19_NODE_NPM_CACHE}")
+
       b19-run "NPM" "$(_ "Install dependencies") $(_ "from") ${DEPSLIST} $(_ "to") ${LOCATION}" --   \
-        xargs npm install "${NPM_VERBOSE[@]}" --location="${LOCATION}" < <(decomment < "${DEPSLIST}")
+        xargs npm install "${NPM_VERBOSE[@]}" "${NPM_CACHE[@]}" --location="${LOCATION}" < <(decomment < "${DEPSLIST}")
 
       b19-run "NPM" "$(_ "Remove") ${DEPSLIST}" --  \
         rm "${DEPSLIST}" # We don't need inheritance here
