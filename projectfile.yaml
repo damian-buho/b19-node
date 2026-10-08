@@ -22,6 +22,7 @@ includes:
   - .makefile/b19/images/gcc.yaml
   - .makefile/b19/images/python.yaml
   - .makefile/b19/images/ubuntu.yaml
+  - .makefile/b19/traits/signed-images.yaml
   - .makefile/b19/vulnerabilities/npm-bundled.yaml
   - .makefile/container/traits/image-variant.yaml
   - https://kiota.ch/b19/metadata/raw/branch/main/include.yaml
