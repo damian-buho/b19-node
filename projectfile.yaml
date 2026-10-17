@@ -17,6 +17,7 @@ identity:
     uk: Дистрибуція Node.js з підтримкою спільноти, зібрана на основі B19/Ubuntu. Цей репозиторій містить лише пакування — Dockerfile, скрипти збирання та конфігурацію, усе під ліцензією MIT; вихідний код Node.js отримують під час збирання, і він зберігає власну ліцензію.
   version: 0.7.3
   released: "2026-10-16"
+  visibility: private
 includes:
   - .makefile/b19/ci.yaml
   - .makefile/b19/images/gcc.yaml
