@@ -1,0 +1,5 @@
+; SPDX-FileCopyrightText: 2026 Damián Búho <damian.buho@proton.me>
+;
+; SPDX-License-Identifier: MIT
+
+store-dir=${B19_NODE_NPM_CACHE}/pnpm-store

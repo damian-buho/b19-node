@@ -61,6 +61,15 @@ manifest (`esbuild`: 16 foreign manifests either way). The win32/darwin lines in
 build logs come from `--verbose`, which `install-npm-from-deps` passes only at
 `B19_VERBOSITY=debug`.
 
+## pnpm store and corepack cache
+
+pnpm’s default store is `$XDG_DATA_HOME/pnpm/store`, inside `B19_HOME` and the data
+volume, so a pnpm install would ship its store in the image. `pnpm_config_store_dir`
+(pnpm 11+) and `/app/.config/pnpm/rc` (pnpm 10 and older, which ignore the variable)
+both point it at `${B19_NODE_NPM_CACHE}/pnpm-store`, the BuildKit cache mount.
+`npm_config_store_dir` is avoided: npm warns on the unknown key. `COREPACK_HOME` moves
+corepack’s downloaded package managers there too, so none of it reaches an export.
+
 ## Private npm registry auth
 
 Handled via BuildKit secrets at build time — not baked into the image.

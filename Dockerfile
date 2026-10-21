@@ -81,6 +81,8 @@ ENV APP_ENV=production                              \
     B19_NPM_BUILD_ENABLED=Y                         \
     B19_NPM_INSTALL_FORCE=N                         \
     B19_NPM_INSTALL_LEGACY_PEER_DEPS=N              \
+    COREPACK_HOME="${XDG_CACHE_HOME}/npm/corepack" \
+    pnpm_config_store_dir="${XDG_CACHE_HOME}/npm/pnpm-store" \
     PATH="${PATH}:${B19_HOME}/node_modules/.bin"
 
 COPY --from=b19-node-builder            /usr/local              /usr/local
