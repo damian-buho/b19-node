@@ -22,6 +22,7 @@ Distribución de Node.js mantenida por la comunidad, construida sobre B19/Ubuntu
 
 - Instalación automática de npm y build
 - Gestores de paquetes fijados
+- La confianza en certificados sigue al almacén del sistema
 
 Consulta [Características](FEATURES.md) para ver la lista completa.
 

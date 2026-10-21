@@ -4,9 +4,9 @@
 # SPDX-License-Identifier: MIT
 msgid ""
 msgstr ""
-"Project-Id-Version: node 1.1.15-12-g661a080\n"
+"Project-Id-Version: node development\n"
 "Report-Msgid-Bugs-To: i18n@b19.dev\n"
-"POT-Creation-Date: 2026-09-24 17:57+0000\n"
+"POT-Creation-Date: 2026-10-21 00:05+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -15,19 +15,19 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: .container/base/tools.d/install-npm-from-deps:31
+#: .container/base/tools.d/install-npm-from-deps:35
 msgid "Install dependencies"
 msgstr ""
 
-#: .container/base/tools.d/install-npm-from-deps:31
+#: .container/base/tools.d/install-npm-from-deps:35
 msgid "from"
 msgstr ""
 
-#: .container/base/tools.d/install-npm-from-deps:31
+#: .container/base/tools.d/install-npm-from-deps:35
 msgid "to"
 msgstr ""
 
-#: .container/base/tools.d/install-npm-from-deps:34
+#: .container/base/tools.d/install-npm-from-deps:38
 msgid "Remove"
 msgstr ""
 
@@ -150,4 +150,8 @@ msgstr ""
 
 #: .container/user/test.d/1300-test-runtime.sh:21
 msgid "node-%s runtime test passed"
+msgstr ""
+
+#: .container/user/test.d/1400-check-ca-store.sh:30
+msgid "Default CA store is the system store (%s)"
 msgstr ""

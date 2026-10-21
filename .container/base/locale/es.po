@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: b19-node\n"
 "Report-Msgid-Bugs-To: i18n@b19.dev\n"
-"POT-Creation-Date: 2026-09-24 17:57+0000\n"
+"POT-Creation-Date: 2026-10-21 00:05+0000\n"
 "PO-Revision-Date: 2026-02-18 00:00+0000\n"
 "Last-Translator: b19 team\n"
 "Language-Team: Spanish\n"
@@ -16,19 +16,19 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: .container/base/tools.d/install-npm-from-deps:31
+#: .container/base/tools.d/install-npm-from-deps:35
 msgid "Install dependencies"
 msgstr "Instalar dependencias"
 
-#: .container/base/tools.d/install-npm-from-deps:31
+#: .container/base/tools.d/install-npm-from-deps:35
 msgid "from"
 msgstr "desde"
 
-#: .container/base/tools.d/install-npm-from-deps:31
+#: .container/base/tools.d/install-npm-from-deps:35
 msgid "to"
 msgstr "a"
 
-#: .container/base/tools.d/install-npm-from-deps:34
+#: .container/base/tools.d/install-npm-from-deps:38
 msgid "Remove"
 msgstr "Eliminar"
 
@@ -154,6 +154,10 @@ msgstr "B19_NODE_BUILD_ENABLED no es Y, se omite la compilación"
 #: .container/user/test.d/1300-test-runtime.sh:21
 msgid "node-%s runtime test passed"
 msgstr ""
+
+#: .container/user/test.d/1400-check-ca-store.sh:30
+msgid "Default CA store is the system store (%s)"
+msgstr "El almacén de CA predeterminado es el del sistema (%s)"
 
 #~ msgid "Development dependencies enabled"
 #~ msgstr "Dependencias de desarrollo habilitadas"

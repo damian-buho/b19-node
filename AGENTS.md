@@ -17,6 +17,7 @@ Node.js runtime compiled from source.
 - Series: 24, 26 (optional: 22)
 - Image name: `b19/node:{series}`
 - Arch: amd64 only
+- Configured with `--openssl-use-def-ca-store`: TLS verifies against the system store, so the b19 distrust cut reaches Node; `NODE_EXTRA_CA_CERTS` only adds to the compiled-in Mozilla copy and cannot remove a root. `test.d/1400-check-ca-store.sh` pins it offline
 
 ## ENV
 

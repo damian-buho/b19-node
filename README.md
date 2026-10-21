@@ -20,6 +20,7 @@ Community-maintained distribution of Node.js built on B19/Ubuntu. This repositor
 
 - Automatic npm install and build
 - Pinned package managers
+- Certificate trust follows the system store
 
 See [Features](docs/FEATURES.md) for the full list.
 

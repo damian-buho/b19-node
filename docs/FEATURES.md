@@ -21,3 +21,10 @@ SPDX-License-Identifier: MIT
 - npm, pnpm, and corepack are preinstalled and version-pinned, so builds are reproducible across runs.
 - Corepack provides on-demand access to Yarn and pnpm without separate installation.
 - Package manager versions are independent of the Node.js release, allowing updates without changing the runtime.
+
+### Certificate trust follows the system store
+
+- Node is built to verify TLS against the system trust store, not the Mozilla copy compiled into the official binary.
+- A root removed from the system store, by Ubuntu or by the b19 distrust list, stops being trusted at once, without waiting for a Node release.
+- Certificates added to the system store are trusted with no `NODE_EXTRA_CA_CERTS` setup.
+- `NODE_OPTIONS=--use-bundled-ca` returns to the compiled-in copy.

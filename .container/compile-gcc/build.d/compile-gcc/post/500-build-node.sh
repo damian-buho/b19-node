@@ -15,7 +15,7 @@
   (
     PRISTINE_PATH="$(echo "${PATH}" | tr ':' '\n' | grep -v '/usr/local/lib/compile-cache' | paste -sd ':' -)"
     b19-log warn "NODE" "$(_p "configure probe with compile-cache off (was %s)" "${B19_COMPILE_CACHE:-<unset>}")"
-    PATH="${PRISTINE_PATH}" b19-run "NODE" "$(_ "Configure")" --  ./configure
+    PATH="${PRISTINE_PATH}" b19-run "NODE" "$(_ "Configure")" --  ./configure --openssl-use-def-ca-store
   )
   b19-run "NODE" "$(_ "Build")" --      make
   b19-run "NODE" "$(_ "Install")" --    make install
