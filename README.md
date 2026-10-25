@@ -30,6 +30,8 @@ See [Features](docs/FEATURES.md) for the full list.
 
 - **Container image** `ghcr.io/damian-buho/b19/node:n24`
 - **Container image** `ghcr.io/damian-buho/b19/node:n26`
+- **Container image** `damianbuho/b19-node:n24`
+- **Container image** `damianbuho/b19-node:n26`
 
 ## Installation
 
@@ -39,6 +41,12 @@ Pull the published container image:
 
 ```sh
 docker pull ghcr.io/damian-buho/b19/node:n24
+```
+
+### Pull from DockerHub — linux/amd64
+
+```sh
+docker pull damianbuho/b19-node:n24
 ```
 
 Series: `n24` | `n26`
@@ -59,8 +67,16 @@ Series: `n24` | `n26`
 
 Build on top of this image:
 
+### From GHCR
+
 ```dockerfile
 FROM ghcr.io/damian-buho/b19/node:n24
+```
+
+### From DockerHub
+
+```dockerfile
+FROM damianbuho/b19-node:n24
 ```
 
 Series: `n24` | `n26`

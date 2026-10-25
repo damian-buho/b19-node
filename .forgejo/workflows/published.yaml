@@ -374,7 +374,7 @@ jobs:
     strategy:
       matrix:
         B19_NODE_SERIES: ["24", "26"]
-        M6E_PUBLISH_SINK: ["kiota"]
+        M6E_PUBLISH_SINK: ["kiota", "dockerhub"]
     env:
       B19_NODE_SERIES: ${{ matrix.B19_NODE_SERIES }}
       COSIGN_PASSWORD: ${{ secrets.COSIGN_PASSWORD }}
@@ -446,6 +446,7 @@ jobs:
           # each registry wants. Credentials key on the SINK name.
           refs: |
             kiota kiota.ch/b19/node:n${{ matrix.B19_NODE_SERIES }}
+            dockerhub docker.io/damianbuho/b19-node:n${{ matrix.B19_NODE_SERIES }}
           # This CELL's destination, off the publish axis: the job runs one cell per
           # place the archive goes, so a registry refusing a push fails only its own.
           sink: ${{ matrix.M6E_PUBLISH_SINK }}

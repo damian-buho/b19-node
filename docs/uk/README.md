@@ -32,6 +32,8 @@ pf-cli-managed: yes
 
 - **Образ контейнера** `ghcr.io/damian-buho/b19/node:n24`
 - **Образ контейнера** `ghcr.io/damian-buho/b19/node:n26`
+- **Образ контейнера** `damianbuho/b19-node:n24`
+- **Образ контейнера** `damianbuho/b19-node:n26`
 
 ## Встановлення
 
@@ -41,6 +43,12 @@ pf-cli-managed: yes
 
 ```sh
 docker pull ghcr.io/damian-buho/b19/node:n24
+```
+
+### Завантажити з DockerHub — linux/amd64
+
+```sh
+docker pull damianbuho/b19-node:n24
 ```
 
 Серія: `n24` | `n26`
@@ -61,8 +69,16 @@ docker pull kiota.ch/b19/node:n24
 
 Побудуйте на основі цього образу:
 
+### З GHCR
+
 ```dockerfile
 FROM ghcr.io/damian-buho/b19/node:n24
+```
+
+### З DockerHub
+
+```dockerfile
+FROM damianbuho/b19-node:n24
 ```
 
 Серія: `n24` | `n26`

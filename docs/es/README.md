@@ -32,6 +32,8 @@ Consulta [Características](FEATURES.md) para ver la lista completa.
 
 - **Imagen de contenedor** `ghcr.io/damian-buho/b19/node:n24`
 - **Imagen de contenedor** `ghcr.io/damian-buho/b19/node:n26`
+- **Imagen de contenedor** `damianbuho/b19-node:n24`
+- **Imagen de contenedor** `damianbuho/b19-node:n26`
 
 ## Instalación
 
@@ -41,6 +43,12 @@ Descarga la imagen de contenedor publicada:
 
 ```sh
 docker pull ghcr.io/damian-buho/b19/node:n24
+```
+
+### Descargar de DockerHub — linux/amd64
+
+```sh
+docker pull damianbuho/b19-node:n24
 ```
 
 Serie: `n24` | `n26`
@@ -61,8 +69,16 @@ Serie: `n24` | `n26`
 
 Construye sobre esta imagen:
 
+### Desde GHCR
+
 ```dockerfile
 FROM ghcr.io/damian-buho/b19/node:n24
+```
+
+### Desde DockerHub
+
+```dockerfile
+FROM damianbuho/b19-node:n24
 ```
 
 Serie: `n24` | `n26`
