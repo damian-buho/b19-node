@@ -1,0 +1,50 @@
+#!/usr/bin/env bash
+
+# SPDX-FileCopyrightText: 2026 Damián Búho <damian.buho@proton.me>
+#
+# SPDX-License-Identifier: MIT
+
+  set -e
+  # shellcheck source=/dev/null
+  . b19-i18n
+  LOCATION=$1
+
+  OVERRIDES="/deps/${LOCATION}.npm.overrides"
+  # Nothing to do without an overrides list
+  [[ -f "${OVERRIDES}" ]] || exit 0
+
+  ROOT="$(npm root --location="${LOCATION}")"
+  WORK="$(mktemp --directory)"
+  trap 'rm --recursive --force "${WORK}"' EXIT
+
+  NPM_CACHE=()
+  [ -n "${B19_NODE_NPM_CACHE:-}" ] && NPM_CACHE=(--cache="${B19_NODE_NPM_CACHE}")
+
+  while IFS= read -r SPEC; do
+    [[ -n "${SPEC}" ]] || continue
+    NAME="${SPEC%@*}"
+    FIXED="${SPEC##*@}"
+
+    # Fetch the pinned release once, npm verifies its registry integrity
+    PACKED="$(cd "${WORK}" && npm pack "${NPM_CACHE[@]}" --silent "${SPEC}")"
+    mkdir --parents "${WORK}/${NAME}"
+    tar --extract --file "${WORK}/${PACKED}" --directory "${WORK}/${NAME}" --strip-components=1
+
+    # Every nested copy of the package under the location root
+    while IFS= read -r COPY; do
+      # fd prints a directory with a trailing slash
+      COPY="${COPY%/}"
+      FOUND="$(node --print "require('${COPY}/package.json').version")"
+      if [[ "${FOUND%%.*}" != "${FIXED%%.*}" ]]; then
+        b19-log warn "NPM" "$(_ "Skip other major") ${NAME} ${FOUND} ${COPY}"
+      elif [[ "$(printf '%s\n' "${FOUND}" "${FIXED}" | sort --version-sort | head --lines=1)" != "${FOUND}" || "${FOUND}" == "${FIXED}" ]]; then
+        b19-log good "NPM" "$(_ "Already fixed") ${NAME} ${FOUND} ${COPY}"
+      else
+        # shellcheck disable=SC2016 # positional args expand inside bash -c
+        b19-run "NPM" "$(_ "Replace bundled") ${NAME} ${FOUND} $(_ "with") ${FIXED} ${COPY}" --   \
+          bash -c 'mv "$1" "$1.old" && cp --archive "$2" "$1" && rm --recursive "$1.old"' _ "${COPY}" "${WORK}/${NAME}"
+      fi
+    done < <(fd --hidden --no-ignore --type directory --absolute-path --full-path "/node_modules/${NAME}\$" "${ROOT}")
+  done < <(decomment < "${OVERRIDES}")
+
+  rm "${OVERRIDES}"

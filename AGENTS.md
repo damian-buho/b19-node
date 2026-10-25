@@ -61,6 +61,13 @@ manifest (`esbuild`: 16 foreign manifests either way). The win32/darwin lines in
 build logs come from `--verbose`, which `install-npm-from-deps` passes only at
 `B19_VERBOSITY=debug`.
 
+## Bundled dependency overrides
+
+npm and pnpm bundle their own `undici`, which `overrides` cannot reach. A pinned
+`name@version` line in `.container/base/deps/<location>.npm.overrides` makes
+`override-bundled-npm` swap every same-major, older nested copy under that
+location after the install. Delete a line once npm and pnpm ship the fix.
+
 ## pnpm store and corepack cache
 
 pnpm’s default store is `$XDG_DATA_HOME/pnpm/store`, inside `B19_HOME` and the data

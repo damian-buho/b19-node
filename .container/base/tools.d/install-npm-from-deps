@@ -42,4 +42,6 @@
   else
     b19-log warn "NPM" "NPM Dependencies list ${DEPSLIST} is not detected"
   fi
+  # Replace vulnerable copies bundled inside what was just installed
+  override-bundled-npm "${LOCATION}"
   # We WON'T clean cache to save BuildKit optimizations
