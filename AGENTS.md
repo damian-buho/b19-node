@@ -16,7 +16,7 @@ Node.js runtime compiled from source.
 - Final base: `b19/ubuntu:${B19_UBUNTU_SERIES}`
 - Series: 24, 26 (optional: 22)
 - Image name: `b19/node:{series}`
-- Arch: amd64 only
+- Arch: amd64, arm64 (the intersection of b19/python, b19/gcc and b19/Ubuntu)
 - Configured with `--openssl-use-def-ca-store`: TLS verifies against the system store, so the b19 distrust cut reaches Node; `NODE_EXTRA_CA_CERTS` only adds to the compiled-in Mozilla copy and cannot remove a root. `test.d/1400-check-ca-store.sh` pins it offline
 
 ## ENV

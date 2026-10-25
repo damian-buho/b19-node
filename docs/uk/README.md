@@ -12,9 +12,11 @@ pf-cli-managed: yes
 
 Дистрибуція Node.js з підтримкою спільноти, зібрана на основі B19/Ubuntu. Цей репозиторій містить лише пакування — Dockerfile, скрипти збирання та конфігурацію, усе під ліцензією MIT; вихідний код Node.js отримують під час збирання, і він зберігає власну ліцензію.
 
-[![Stand with Ukraine](https://raw.githubusercontent.com/vshymanskyy/StandWithUkraine/main/badges/StandWithUkraine.svg)](https://damian-buho.github.io/support-ukraine/) [![Projectfile inside](https://badges.kiota.ch/static/v1?label=projectfile&message=inside&labelColor=0d0d0d&color=8c6723&style=flat-square)](https://projectfile.org) [![License](https://badges.kiota.ch/static/v1?label=license&message=MIT&color=1e5913&style=flat-square)](LICENSE) [![Cosign](https://badges.kiota.ch/static/v1?label=cosign&message=enabled&color=1e5913&style=flat-square)](https://docs.sigstore.dev/cosign/verifying/verify/)
+[![Stand with Ukraine](https://raw.githubusercontent.com/vshymanskyy/StandWithUkraine/main/badges/StandWithUkraine.svg)](https://damian-buho.github.io/support-ukraine/) [![Projectfile inside](https://badges.kiota.ch/static/v1?label=projectfile&message=inside&labelColor=0d0d0d&color=8c6723&style=flat-square)](https://projectfile.org) [![License](https://badges.kiota.ch/static/v1?label=license&message=MIT&color=1e5913&style=flat-square)](LICENSE) [![Cosign](https://badges.kiota.ch/static/v1?label=cosign&message=enabled&color=1e5913&style=flat-square)](https://docs.sigstore.dev/cosign/verifying/verify/) [![PRs welcome](https://badges.kiota.ch/static/v1?label=PRs&message=welcome&color=1e5913&style=flat-square)](CONTRIBUTING.md) [![REUSE compliance](https://api.reuse.software/badge/github.com/damian-buho/b19-node)](https://api.reuse.software/info/github.com/damian-buho/b19-node)
 
-![Project status](https://badges.kiota.ch/static/v1?label=status&message=maintained&color=1d63ed&style=flat-square) [![Last commit on kiota.ch](https://badges.kiota.ch/gitea/last-commit/b19/node?gitea_url=https://kiota.ch&label=last%20commit%20on%20kiota.ch&style=flat-square)](https://kiota.ch/b19/node)
+![Project status](https://badges.kiota.ch/static/v1?label=status&message=maintained&color=1d63ed&style=flat-square) [![Last commit on GitHub](https://badges.kiota.ch/github/last-commit/damian-buho/b19-node?label=last%20commit%20on%20GitHub&style=flat-square)](https://github.com/damian-buho/b19-node) [![Last commit on kiota.ch](https://badges.kiota.ch/gitea/last-commit/b19/node?gitea_url=https://kiota.ch&label=last%20commit%20on%20kiota.ch&style=flat-square)](https://kiota.ch/b19/node)
+
+[![Publish pipeline on GitHub](https://github.com/damian-buho/b19-node/actions/workflows/published.yaml/badge.svg?style=flat-square)](https://github.com/damian-buho/b19-node/actions) [![Vulnerability audit on GitHub](https://github.com/damian-buho/b19-node/actions/workflows/audited.yaml/badge.svg?style=flat-square)](https://github.com/damian-buho/b19-node/actions) [![Dependency freshness on GitHub](https://github.com/damian-buho/b19-node/actions/workflows/check-outdated.yaml/badge.svg?style=flat-square)](https://github.com/damian-buho/b19-node/actions) [![Analysis sweep on GitHub](https://github.com/damian-buho/b19-node/actions/workflows/analyzed.yaml/badge.svg?style=flat-square)](https://github.com/damian-buho/b19-node/actions)
 
 [![Publish pipeline on kiota.ch](https://kiota.ch/b19/node/badges/workflows/published.yaml/badge.svg?style=flat-square)](https://kiota.ch/b19/node/actions) [![Vulnerability audit on kiota.ch](https://kiota.ch/b19/node/badges/workflows/audited.yaml/badge.svg?style=flat-square)](https://kiota.ch/b19/node/actions) [![Dependency freshness on kiota.ch](https://kiota.ch/b19/node/badges/workflows/check-outdated.yaml/badge.svg?style=flat-square)](https://kiota.ch/b19/node/actions) [![Analysis sweep on kiota.ch](https://kiota.ch/b19/node/badges/workflows/analyzed.yaml/badge.svg?style=flat-square)](https://kiota.ch/b19/node/actions)
 
@@ -28,16 +30,26 @@ pf-cli-managed: yes
 
 ## Що надає цей проєкт
 
-- **Образ контейнера** `kiota.ch/b19/node:n24`
-- **Образ контейнера** `kiota.ch/b19/node:n26`
-
-## Підтримувані платформи
-
-- `linux/amd64`
+- **Образ контейнера** `ghcr.io/damian-buho/b19/node:n24`
+- **Образ контейнера** `ghcr.io/damian-buho/b19/node:n26`
 
 ## Встановлення
 
 Завантажте опублікований образ контейнера:
+
+### Завантажити з GHCR — linux/amd64, linux/arm64
+
+```sh
+docker pull ghcr.io/damian-buho/b19/node:n24
+```
+
+Серія: `n24` | `n26`
+
+Стабільні випуски також публікують теґи `X.Y.Z`, `X.Y` і `X` — завантажте той рівень точності, який хочете зафіксувати.
+
+Якщо наведені вище реєстри недоступні, завантажте з джерела:
+
+### Завантажити з Kiota — linux/amd64
 
 ```sh
 docker pull kiota.ch/b19/node:n24
@@ -45,14 +57,12 @@ docker pull kiota.ch/b19/node:n24
 
 Серія: `n24` | `n26`
 
-Стабільні випуски також публікують теґи `X.Y.Z`, `X.Y` і `X` — завантажте той рівень точності, який хочете зафіксувати.
-
 ## Використання
 
 Побудуйте на основі цього образу:
 
 ```dockerfile
-FROM kiota.ch/b19/node:n24
+FROM ghcr.io/damian-buho/b19/node:n24
 ```
 
 Серія: `n24` | `n26`
@@ -60,6 +70,12 @@ FROM kiota.ch/b19/node:n24
 Для рекомендованого багатоетапного шаблону та системи хуків збірки (build.d) створіть похідний проєкт за допомогою `b19/scripts/scaffold.sh` з [m6e/b19](https://kiota.ch/m6e/b19).
 
 ## Збирання
+
+Клонуйте репозиторій разом із підмодулями:
+
+```sh
+git clone --recurse-submodules https://github.com/damian-buho/b19-node node && cd node
+```
 
 Зберіть образ контейнера локально:
 

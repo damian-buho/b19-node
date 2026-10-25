@@ -17,7 +17,7 @@ identity:
     uk: Дистрибуція Node.js з підтримкою спільноти, зібрана на основі B19/Ubuntu. Цей репозиторій містить лише пакування — Dockerfile, скрипти збирання та конфігурацію, усе під ліцензією MIT; вихідний код Node.js отримують під час збирання, і він зберігає власну ліцензію.
   version: 0.8.0
   released: "2026-10-21"
-  visibility: private
+  visibility: public
 includes:
   - .makefile/b19/ci.yaml
   - .makefile/b19/images/gcc.yaml
@@ -29,6 +29,7 @@ includes:
   - .makefile/b19/vulnerabilities/bundles/npm.yaml
   - .makefile/container/traits/image/variant.yaml
   - https://kiota.ch/b19/metadata/raw/branch/main/include.yaml
+  - https://kiota.ch/damian-buho/metadata/raw/branch/main/forge/github.yaml
   - https://kiota.ch/damian-buho/metadata/raw/branch/main/include.yaml
 keywords:
   - node
@@ -38,6 +39,20 @@ keywords:
   - docker
 kind: SoftwareSourceCode
 links:
+  - label:
+      en: B19 / Node on GitHub
+      es: B19 / Node en GitHub
+      uk: B19 / Node на GitHub
+    tags: [public, badges, badges-github]
+    type: source-code
+    url: https://github.com/damian-buho/b19-node
+  - label:
+      en: Issues on GitHub
+      es: Incidencias en GitHub
+      uk: Задачі на GitHub
+    tags: [support]
+    type: bugs
+    url: https://github.com/damian-buho/b19-node/issues
   - label:
       en: B19 / Node on kiota.ch
       es: B19 / Node en kiota.ch
@@ -51,6 +66,9 @@ org:
     scaffold:
       root-stage: root
   projectfile:
+    architecture:
+      - amd64
+      - arm64
     build:
       args:
         B19_NODE_SERIES: 24
@@ -81,6 +99,9 @@ org:
           - ../ubuntu
     status: maintained
 repositories:
+  - role: mirror
+    type: git
+    url: git@github.com:damian-buho/b19-node.git
   - branch: main
     role: origin
     type: git
