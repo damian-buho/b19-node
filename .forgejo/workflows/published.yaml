@@ -58,6 +58,8 @@ name: published
         type: string
       M6E_NEAR_CACHE_PORT:
         type: string
+      M6E_NEAR_CACHE_SCHEME:
+        type: string
       SOURCE_DOCKER_REGISTRY:
         type: string
 concurrency:
@@ -208,7 +210,6 @@ jobs:
       group: build-${{ github.repository }}-${{ toJSON(matrix) }}
       cancel-in-progress: false
     strategy:
-      max-parallel: 2
       matrix:
         B19_NODE_SERIES: ["24"]
         M6E_ARCH: ["amd64"]
@@ -237,6 +238,7 @@ jobs:
       M6E_BUILD_DEBUG: ${{ inputs.M6E_BUILD_DEBUG || vars.M6E_BUILD_DEBUG }}
       M6E_NEAR_CACHE_HOST: ${{ inputs.M6E_NEAR_CACHE_HOST || vars.M6E_NEAR_CACHE_HOST }}
       M6E_NEAR_CACHE_PORT: ${{ inputs.M6E_NEAR_CACHE_PORT || vars.M6E_NEAR_CACHE_PORT }}
+      M6E_NEAR_CACHE_SCHEME: ${{ inputs.M6E_NEAR_CACHE_SCHEME || vars.M6E_NEAR_CACHE_SCHEME }}
       SCCACHE_REDIS_ENDPOINT: ${{ vars.SCCACHE_REDIS_ENDPOINT }}
       SOURCE_DOCKER_REGISTRY: ${{ inputs.SOURCE_DOCKER_REGISTRY || vars.SOURCE_DOCKER_REGISTRY }}
       M6E_VERSION: ${{ needs.release-tag.outputs.tag }}
@@ -275,6 +277,7 @@ jobs:
             M6E_NAMESPACE=b19
             M6E_NEAR_CACHE_HOST=${{ inputs.M6E_NEAR_CACHE_HOST || vars.M6E_NEAR_CACHE_HOST }}
             M6E_NEAR_CACHE_PORT=${{ inputs.M6E_NEAR_CACHE_PORT || vars.M6E_NEAR_CACHE_PORT }}
+            M6E_NEAR_CACHE_SCHEME=${{ inputs.M6E_NEAR_CACHE_SCHEME || vars.M6E_NEAR_CACHE_SCHEME }}
             M6E_PROJECT=node
             M6E_VERSION=${{ needs.release-tag.outputs.tag }}
             SCCACHE_REDIS_ENDPOINT=${{ vars.SCCACHE_REDIS_ENDPOINT }}
@@ -292,7 +295,6 @@ jobs:
       group: build-${{ github.repository }}-${{ toJSON(matrix) }}
       cancel-in-progress: false
     strategy:
-      max-parallel: 2
       matrix:
         B19_NODE_SERIES: ["26"]
         M6E_ARCH: ["amd64"]
@@ -321,6 +323,7 @@ jobs:
       M6E_BUILD_DEBUG: ${{ inputs.M6E_BUILD_DEBUG || vars.M6E_BUILD_DEBUG }}
       M6E_NEAR_CACHE_HOST: ${{ inputs.M6E_NEAR_CACHE_HOST || vars.M6E_NEAR_CACHE_HOST }}
       M6E_NEAR_CACHE_PORT: ${{ inputs.M6E_NEAR_CACHE_PORT || vars.M6E_NEAR_CACHE_PORT }}
+      M6E_NEAR_CACHE_SCHEME: ${{ inputs.M6E_NEAR_CACHE_SCHEME || vars.M6E_NEAR_CACHE_SCHEME }}
       SCCACHE_REDIS_ENDPOINT: ${{ vars.SCCACHE_REDIS_ENDPOINT }}
       SOURCE_DOCKER_REGISTRY: ${{ inputs.SOURCE_DOCKER_REGISTRY || vars.SOURCE_DOCKER_REGISTRY }}
       M6E_VERSION: ${{ needs.release-tag.outputs.tag }}
@@ -359,6 +362,7 @@ jobs:
             M6E_NAMESPACE=b19
             M6E_NEAR_CACHE_HOST=${{ inputs.M6E_NEAR_CACHE_HOST || vars.M6E_NEAR_CACHE_HOST }}
             M6E_NEAR_CACHE_PORT=${{ inputs.M6E_NEAR_CACHE_PORT || vars.M6E_NEAR_CACHE_PORT }}
+            M6E_NEAR_CACHE_SCHEME=${{ inputs.M6E_NEAR_CACHE_SCHEME || vars.M6E_NEAR_CACHE_SCHEME }}
             M6E_PROJECT=node
             M6E_VERSION=${{ needs.release-tag.outputs.tag }}
             SCCACHE_REDIS_ENDPOINT=${{ vars.SCCACHE_REDIS_ENDPOINT }}
