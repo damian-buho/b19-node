@@ -20,6 +20,11 @@ Distribución de Node.js mantenida por la comunidad, construida sobre B19/Ubuntu
 
 [![Publish pipeline on kiota.ch](https://kiota.ch/b19/node/badges/workflows/published.yaml/badge.svg?style=flat-square)](https://kiota.ch/b19/node/actions) [![Vulnerability audit on kiota.ch](https://kiota.ch/b19/node/badges/workflows/audited.yaml/badge.svg?style=flat-square)](https://kiota.ch/b19/node/actions) [![Dependency freshness on kiota.ch](https://kiota.ch/b19/node/badges/workflows/check-outdated.yaml/badge.svg?style=flat-square)](https://kiota.ch/b19/node/actions) [![Analysis sweep on kiota.ch](https://kiota.ch/b19/node/badges/workflows/analyzed.yaml/badge.svg?style=flat-square)](https://kiota.ch/b19/node/actions)
 
+## Proyecto original
+
+Este proyecto empaqueta [Node.js](https://nodejs.org) (`MIT`).
+Gracias a: los colaboradores de Node.js
+
 ## Características
 
 - Instalación automática de npm y build
@@ -123,11 +128,6 @@ Puntos de entrada de la canalización:
 ## Enlaces
 
 - [Especificación de Projectfile](https://projectfile.org)
-
-## Proyecto original
-
-Este proyecto empaqueta [Node.js](https://nodejs.org) (`MIT`).
-Gracias a: The Node.js contributors
 
 ## Licencia
 

@@ -18,6 +18,11 @@ Community-maintained distribution of Node.js built on B19/Ubuntu. This repositor
 
 [![Publish pipeline on kiota.ch](https://kiota.ch/b19/node/badges/workflows/published.yaml/badge.svg?style=flat-square)](https://kiota.ch/b19/node/actions) [![Vulnerability audit on kiota.ch](https://kiota.ch/b19/node/badges/workflows/audited.yaml/badge.svg?style=flat-square)](https://kiota.ch/b19/node/actions) [![Dependency freshness on kiota.ch](https://kiota.ch/b19/node/badges/workflows/check-outdated.yaml/badge.svg?style=flat-square)](https://kiota.ch/b19/node/actions) [![Analysis sweep on kiota.ch](https://kiota.ch/b19/node/badges/workflows/analyzed.yaml/badge.svg?style=flat-square)](https://kiota.ch/b19/node/actions)
 
+## Upstream
+
+This project packages [Node.js](https://nodejs.org) (`MIT`).
+Thanks to: The Node.js contributors
+
 ## Features
 
 - Automatic npm install and build
@@ -121,11 +126,6 @@ Pipeline entry points:
 ## Links
 
 - [Projectfile Specification](https://projectfile.org)
-
-## Upstream
-
-This project packages [Node.js](https://nodejs.org) (`MIT`).
-Thanks to: The Node.js contributors
 
 ## License
 

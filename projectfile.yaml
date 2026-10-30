@@ -128,7 +128,10 @@ technologies:
   - javascript
   - node
 upstream:
-  - authors: The Node.js contributors
+  - authors:
+      en: The Node.js contributors
+      es: los colaboradores de Node.js
+      uk: учасники Node.js
     license: MIT
     name: Node.js
     url: https://nodejs.org

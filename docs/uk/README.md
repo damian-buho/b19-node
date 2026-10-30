@@ -20,6 +20,11 @@ pf-cli-managed: yes
 
 [![Publish pipeline on kiota.ch](https://kiota.ch/b19/node/badges/workflows/published.yaml/badge.svg?style=flat-square)](https://kiota.ch/b19/node/actions) [![Vulnerability audit on kiota.ch](https://kiota.ch/b19/node/badges/workflows/audited.yaml/badge.svg?style=flat-square)](https://kiota.ch/b19/node/actions) [![Dependency freshness on kiota.ch](https://kiota.ch/b19/node/badges/workflows/check-outdated.yaml/badge.svg?style=flat-square)](https://kiota.ch/b19/node/actions) [![Analysis sweep on kiota.ch](https://kiota.ch/b19/node/badges/workflows/analyzed.yaml/badge.svg?style=flat-square)](https://kiota.ch/b19/node/actions)
 
+## Першоджерело
+
+Цей проєкт пакує [Node.js](https://nodejs.org) (`MIT`).
+Дякуємо: учасники Node.js
+
 ## Можливості
 
 - Автоматична встановлення npm та збірка
@@ -123,11 +128,6 @@ make container-build
 ## Посилання
 
 - [Специфікація Projectfile](https://projectfile.org)
-
-## Першоджерело
-
-Цей проєкт пакує [Node.js](https://nodejs.org) (`MIT`).
-Дякуємо: The Node.js contributors
 
 ## Ліцензія
 
