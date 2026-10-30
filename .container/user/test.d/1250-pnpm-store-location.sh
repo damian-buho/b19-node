@@ -7,10 +7,7 @@
 set -eou pipefail
 
 # pnpm must keep its store under the npm cache, never inside the shipped tree.
-[ "${pnpm_config_store_dir:-}" = "${B19_NODE_NPM_CACHE}/pnpm-store" ] || {
-  echo "FATAL: pnpm_config_store_dir is ${pnpm_config_store_dir:-}" >&2
-  exit 1
-}
+b19-assert equals "PNPM_STORE" "${B19_NODE_NPM_CACHE}/pnpm-store" "${pnpm_config_store_dir:-}"
 
 grep -q "^store-dir=\${B19_NODE_NPM_CACHE}/pnpm-store$" "${XDG_CONFIG_HOME}/pnpm/rc" || {
   echo "FATAL: pnpm rc does not point store-dir at the npm cache" >&2

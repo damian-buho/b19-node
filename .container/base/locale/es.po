@@ -5,8 +5,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: b19-node\n"
-"Report-Msgid-Bugs-To: i18n@b19.dev\n"
-"POT-Creation-Date: 2026-10-21 00:05+0000\n"
+"Report-Msgid-Bugs-To: https://github.com/damian-buho/b19-node/issues\n"
+"POT-Creation-Date: 2026-10-30 22:13+0000\n"
 "PO-Revision-Date: 2026-02-18 00:00+0000\n"
 "Last-Translator: b19 team\n"
 "Language-Team: Spanish\n"
@@ -31,6 +31,22 @@ msgstr "a"
 #: .container/base/tools.d/install-npm-from-deps:38
 msgid "Remove"
 msgstr "Eliminar"
+
+#: .container/base/tools.d/override-bundled-npm:39
+msgid "Skip other major"
+msgstr ""
+
+#: .container/base/tools.d/override-bundled-npm:41
+msgid "Already fixed"
+msgstr ""
+
+#: .container/base/tools.d/override-bundled-npm:44
+msgid "Replace bundled"
+msgstr ""
+
+#: .container/base/tools.d/override-bundled-npm:44
+msgid "with"
+msgstr ""
 
 #: .container/base/build.d/always/pre/100-npm-platform.i.sh:19
 msgid "Install platform: os=%s cpu=%s libc=%s"

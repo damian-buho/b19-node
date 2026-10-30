@@ -4,9 +4,9 @@
 # SPDX-License-Identifier: MIT
 msgid ""
 msgstr ""
-"Project-Id-Version: node development\n"
-"Report-Msgid-Bugs-To: i18n@b19.dev\n"
-"POT-Creation-Date: 2026-10-21 00:05+0000\n"
+"Project-Id-Version: node 0.10.1-4-g5ebdb34\n"
+"Report-Msgid-Bugs-To: https://github.com/damian-buho/b19-node/issues\n"
+"POT-Creation-Date: 2026-10-30 22:13+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -29,6 +29,22 @@ msgstr ""
 
 #: .container/base/tools.d/install-npm-from-deps:38
 msgid "Remove"
+msgstr ""
+
+#: .container/base/tools.d/override-bundled-npm:39
+msgid "Skip other major"
+msgstr ""
+
+#: .container/base/tools.d/override-bundled-npm:41
+msgid "Already fixed"
+msgstr ""
+
+#: .container/base/tools.d/override-bundled-npm:44
+msgid "Replace bundled"
+msgstr ""
+
+#: .container/base/tools.d/override-bundled-npm:44
+msgid "with"
 msgstr ""
 
 #: .container/base/build.d/always/pre/100-npm-platform.i.sh:19
