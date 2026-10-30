@@ -127,3 +127,8 @@ repositories:
 technologies:
   - javascript
   - node
+upstream:
+  - authors: The Node.js contributors
+    license: MIT
+    name: Node.js
+    url: https://nodejs.org

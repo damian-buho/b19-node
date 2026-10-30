@@ -124,8 +124,13 @@ make container-build
 
 - [Специфікація Projectfile](https://projectfile.org)
 
+## Першоджерело
+
+Цей проєкт пакує [Node.js](https://nodejs.org) (`MIT`).
+Дякуємо: The Node.js contributors
+
 ## Ліцензія
 
-Цей проєкт ліцензовано на умовах MIT — див. файл [LICENSE](LICENSE) для подробиць.
+Пакування в цьому репозиторії ліцензовано на умовах MIT — див. файл [LICENSE](LICENSE) для подробиць.
 
 <!-- textlint-enable -->

@@ -122,6 +122,11 @@ Pipeline entry points:
 
 - [Projectfile Specification](https://projectfile.org)
 
+## Upstream
+
+This project packages [Node.js](https://nodejs.org) (`MIT`).
+Thanks to: The Node.js contributors
+
 ## License
 
-This project is licensed under MIT — see the [LICENSE](LICENSE) file for details.
+The packaging in this repository is licensed under MIT — see the [LICENSE](LICENSE) file for details.
