@@ -99,6 +99,8 @@ org:
         parts:
           - series
     ci:
+      build-memory:
+        forgejo: 16g
       matrix:
         axes:
           B19_NODE_SERIES:
