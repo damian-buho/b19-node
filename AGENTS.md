@@ -41,7 +41,7 @@ A shim that re-execs its own path turns every call into an unbounded self-spawn
 host). The install reports success, so nothing points at it.
 
 Consuming projects list the packages to approve, one per line, in
-`.container/user/deps/allow-scripts.npm.deps` (copied to `/deps/allow-scripts.npm.deps`).
+`.container/user/deps/allow-scripts.npm.list` (copied to `/deps/allow-scripts.npm.list`).
 `150-npm-allow-scripts.i.sh` writes them to the user `.npmrc` as `allow-scripts`
 before any install, so `npm ci` runs those scripts itself. npm refuses
 `--allow-scripts` and `npm_config_allow_scripts` in a project install

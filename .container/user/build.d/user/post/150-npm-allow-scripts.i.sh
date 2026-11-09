@@ -5,7 +5,7 @@
 # SPDX-License-Identifier: MIT
 
 
-  ALLOW_SCRIPTS_DEPS="/deps/allow-scripts.npm.deps"
+  ALLOW_SCRIPTS_DEPS="/deps/allow-scripts.npm.list"
 
   if [ -f "${ALLOW_SCRIPTS_DEPS}" ]
   then
